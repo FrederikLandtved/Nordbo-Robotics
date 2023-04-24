@@ -9,13 +9,13 @@
 <template>
   <nav class="navigation--bar">
     <div class="navigation--bar__item" @click="goToRoute('/')">
-      <span>Home</span>
+      <img src="../assets/img/icons/home2.svg" alt="home"> <p>Home</p>
     </div>
     <div class="navigation--bar__item" @click="goToRoute('/mylearning')">
-      <span>My Learning</span>
+     <img src="../assets/img/icons/Ide.svg" alt="learning"> <p>My Learning</p>
     </div>
     <div class="navigation--bar__item" @click="goToRoute('/notifications')">
-      <span>Notifications</span>
+     <img src="../assets/img/icons/Clock.svg" alt="notifications" style="width: 30px;"> <p>Notifications</p>
     </div>
   </nav>
 </template>
@@ -23,11 +23,11 @@
 <style lang="scss">
   .navigation--bar {
     width: 100%;
-    height: 70px;
+    height: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
+   
 
     &__item {
       flex: 1;
@@ -35,15 +35,24 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      align-content: center;
+      align-items: center;
       justify-content: center;
       cursor: pointer;
-      background-color: #ebebeb;
+      background-color:#f2f2f2;
 
+      p{
+        font-size: 15px;
+      }
+      
+      img{
+      width: 40px;
+      }
       div {
         width: fit-content;
         text-align: center;
       }
     }
+
+
   }
 </style>

@@ -14,7 +14,7 @@ import NavigationBar from '@/components/NavigationBar.vue'
 
 <style scoped>
   main {
-    background-color: rgb(205, 205, 205);
+    background-color:#ffffff;
     height: calc(100vh - 70px);
   }
 
