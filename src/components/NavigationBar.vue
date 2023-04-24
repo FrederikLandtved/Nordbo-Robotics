@@ -15,7 +15,7 @@
      <img src="../assets/img/icons/Ide.svg" alt="learning"> <p>My Learning</p>
     </div>
     <div class="navigation--bar__item" @click="goToRoute('/notifications')">
-     <img src="../assets/img/icons/Clock.svg" alt="notifications" style="width: 30px;"> <p>Notifications</p>
+     <img src="../assets/img/icons/Clock.svg" alt="notifications" style="width: 25px;"> <p>Notifications</p>
     </div>
   </nav>
 </template>
