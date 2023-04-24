@@ -61,3 +61,24 @@ footer {
 
 
 }
+
+.mylearning {
+  background-color: $iconColor;
+  height: 100vh;
+  width: 100%;
+
+  img {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  .profile {
+    background-color: #ffffff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    bottom: 0;
+    height: 85vh;
+    position: fixed;
+    width: 100%;
+  }
+}

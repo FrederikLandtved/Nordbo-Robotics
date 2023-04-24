@@ -2,5 +2,13 @@
 </script>
 
 <template>
-  <h1>My Learning</h1>
+  <div class="mylearning">
+
+    <img src="../assets/img/icons/back.svg" alt="">
+    
+    <div class="profile">
+
+    </div>
+
+  </div>
 </template>

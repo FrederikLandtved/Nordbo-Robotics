@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.333" height="47.333" viewBox="0 0 47.333 47.333">
+  <defs>
+    <filter id="Icon_awesome-chevron-circle-left" x="0" y="0" width="47.333" height="47.333" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-chevron-circle-left)">
+    <path id="Icon_awesome-chevron-circle-left-2" data-name="Icon awesome-chevron-circle-left" d="M15.229,29.9A14.667,14.667,0,1,1,29.9,15.229,14.664,14.664,0,0,1,15.229,29.9ZM8.493,16.234l8.013,8.013a1.413,1.413,0,0,0,2,0l1.005-1.005a1.413,1.413,0,0,0,0-2l-6.009-6.009L19.517,9.22a1.413,1.413,0,0,0,0-2L18.511,6.21a1.413,1.413,0,0,0-2,0L8.493,14.224A1.421,1.421,0,0,0,8.493,16.234Z" transform="translate(8.44 5.44)" fill="#fff"/>
+  </g>
+</svg>
