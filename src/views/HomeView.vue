@@ -1,4 +1,6 @@
 <script setup>
+  import ProductCard from '@/components/ui-kit/ProductCard.vue'
+  import GridButton from '@/components/ui-kit/GridButton.vue'
 </script>
 
 <template>
@@ -11,6 +13,18 @@
       <input type="text" placeholder="Search...">
     </div>
   </div>
+    <div class="home-page--container">
+      <ProductCard title='Mimic' paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' />
+      <h4 class="headline">Here is how you can use Mimic</h4>
+      <div class="grid-container">
+        <GridButton title='Sanding'></GridButton>
+        <GridButton title='Griding'></GridButton>
+        <GridButton title='Control'></GridButton>
+        <GridButton title='Painting'></GridButton>
+        <GridButton title='Deburring'></GridButton>
+        <GridButton title='Finishing'></GridButton>
+      </div>
+    </div>
 </template>
 
 <style lang="scss">
@@ -19,14 +33,14 @@
     height: 45px;
     display: flex;
     gap: 18px;
-    margin-top: 10px;
+    margin-top: 20px;
 
     &__search {
       flex: 1;
       margin-right: 20px;
       display: flex;
       align-items: center;
-      box-shadow: rgba(100, 100, 111, 0.3) 0px 4px 12px 0px;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 4px 8px 0px;
       border-radius: 14px;
 
       input {
@@ -51,13 +65,40 @@
     &__initials {
       width: fit-content;
       background-color: #02215C;
-      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 12px;
       border-top-right-radius: 14px;
       border-bottom-right-radius: 14px;
+
+      span {
+        color: white
+      }
     }
+  }
+
+  .home-page--container {
+    padding: 15px;
+    margin-top: 10px;
+
+    .headline {
+      font-size: 14px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .grid-container {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-row-gap: 8px;
+  }
+
+  .item {
+    background-color: #ddd;
+    padding: 20px;
   }
 </style>
