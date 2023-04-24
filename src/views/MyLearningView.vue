@@ -8,6 +8,10 @@
     
     <div class="profile">
 
+      <div class="profile-info">
+        <img src="../assets/img/stefan.jpg" alt="Profile Picture">
+      </div>
+
     </div>
 
   </div>
