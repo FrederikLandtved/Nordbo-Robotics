@@ -12,16 +12,4 @@ import NavigationBar from '@/components/NavigationBar.vue'
   </footer>
 </template>
 
-<style scoped>
-  main {
-    background-color:#ffffff;
-    height: calc(100vh - 70px);
-  }
 
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-</style>
