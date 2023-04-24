@@ -26,10 +26,24 @@
             </div>
             
             <div class="noti">
+                <h3>Remember to finish the following courses</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>1 week ago</span>
+            </div>
+
+            <div class="noti">
+                <h3>You must renew your downloads</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>2 weeks ago</span>
+            </div>
+
+            <div class="noti">
                 <h3>Lorem</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>7 days ago</span>
+                <span>1 month ago</span>
             </div>
+
+
         
         </div>
     </div>
