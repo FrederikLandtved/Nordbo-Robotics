@@ -6,9 +6,7 @@
 
     <img src="../assets/img/icons/back.svg" alt="">
     
-    <div class="profile" style="padding:0;">
-        
-      
+    <div class="profile" style="padding:8px 0;">
     
         <div class="notifications">
             <h2>Notifications</h2>
@@ -52,3 +50,41 @@
 </template>
 
 
+<style scoped lang="scss">
+@import "@/assets/main.scss";
+
+//Notifications
+
+.notifications {
+    font-weight: 300;
+    
+    h2{
+        margin: 30px 15px;
+        font-weight: 300px;
+    }
+}
+
+.noti{
+   padding-bottom: 20px;
+   background-color: $background-noti;
+   padding: 15px;
+   
+  
+  p{
+    font-size: 12px;
+  }
+   span{
+    font-size: 10px;
+    color:#054BD0;
+    
+   }
+   h3{
+    margin-bottom: 10px;
+    font-size: 14px;
+   }
+}
+.noti-aktiv{
+    background-color: $background-noti-aktiv;
+}
+
+</style>

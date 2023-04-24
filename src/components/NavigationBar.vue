@@ -20,3 +20,43 @@
   </nav>
 </template>
 
+<style scoped lang="scss">
+@import "@/assets/main.scss";
+
+//Navigationsbar
+.navigation--bar {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+
+  &__item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color:#f2f2f2;
+
+    p{
+      font-size: 10px;
+      color: $iconColor;
+    }
+    
+    img{
+    width: 30px;
+    }
+    div {
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+
+}
+</style>

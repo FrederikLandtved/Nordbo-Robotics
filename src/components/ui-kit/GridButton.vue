@@ -29,7 +29,7 @@
     h2 {
       color: white;
       font-weight: 500;
-      text-shadow: #FC0 1px 0 20px;
+      text-shadow: #02215C 1px 0 20px;
     }
   }
 

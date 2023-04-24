@@ -21,47 +21,10 @@ main {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-//Navigationsbar
-.navigation--bar {
-  width: 100%;
-  height: 110px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
- 
-
-  &__item {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color:#f2f2f2;
-
-    p{
-      font-size: 10px;
-      color: $iconColor;
-    }
-    
-    img{
-    width: 30px;
-    }
-    div {
-      width: fit-content;
-      text-align: center;
-    }
-  }
-
-
 }
 
 .mylearning {
@@ -80,56 +43,16 @@ footer {
     border-top-right-radius: 30px;
     bottom: 0;
     box-sizing: border-box;
-    height: 85vh;
+    height: 100%;
+    margin-top: 100px;
     padding: 15px;
-    position: fixed;
     width: 100%;
 
     .profile-info {
       height: 25vh;
       margin-top: -70px;
-      width: 350px;
-
-
+      max-width: 100%;
     }
   }
-}
-
-
-
-
-//Notifications
-
-.notifications {
-    font-weight: 300;
-    
-    
-    h2{
-        margin: 30px 15px;
-        font-weight: 300px;
-    }
-}
-
-.noti{
-   padding-bottom: 20px;
-   background-color: $background-noti;
-   padding: 15px;
-   
-  
-  p{
-    font-size: 12px;
-  }
-   span{
-    font-size: 10px;
-    color:#054BD0;
-    
-   }
-   h3{
-    margin-bottom: 10px;
-    font-size: 14px;
-   }
-}
-.noti-aktiv{
-    background-color: $background-noti-aktiv;
 }
 
