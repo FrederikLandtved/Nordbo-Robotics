@@ -1,4 +1,9 @@
 <script setup>
+  import router from '@/router'
+
+const goToRoute = (route) => {
+  router.push({ path: route });
+}
 </script>
 
 <template>
