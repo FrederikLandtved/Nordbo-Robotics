@@ -1,5 +1,5 @@
 import { authentication } from "../../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const createUser = (email, password) => {
   const authInstance = authentication;
@@ -32,4 +32,14 @@ export const login = (email, password) => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
+}
+
+export const logOut = () => {
+  const authInstance = authentication;
+
+  signOut(authInstance).then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    // An error happened.
+  });
 }
