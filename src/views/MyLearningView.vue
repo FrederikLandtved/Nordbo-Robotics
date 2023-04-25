@@ -14,7 +14,7 @@
         
         <div class="profile-info-header">
         <h1>Stefan Jespersen</h1>
-        <img src="../assets/img/icons/edit.svg" alt="Edit">
+        <img src="../assets/img/icons/edit.svg" @click="goToRoute('/login')" alt="Edit">
       </div>
 
         <div class="profile-info-item">
@@ -27,8 +27,15 @@
         <h3>3 task/s completed</h3>
       </div>
 
-        
       </div>
+
+      <button class="myLibary">
+        My Libary
+      </button>
+
+      <button class="download">
+        Download
+      </button>
 
     </div>
 
@@ -59,8 +66,9 @@ $background-noti-aktiv:#eeeeee;
         justify-content: space-between;
 
         img {
+          border-radius: 0;
           margin-top: -12px;
-          width: 30px;
+          width: 35px;
         }
       }
 
@@ -96,6 +104,14 @@ $background-noti-aktiv:#eeeeee;
         padding: 13px 0 0 0;
         width: 10px;
       }
+
+  }
+
+  .myLibary {
+
+  }
+
+  .download {
 
   }
 }
