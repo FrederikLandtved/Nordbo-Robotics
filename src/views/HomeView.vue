@@ -17,12 +17,12 @@
       <ProductCard title='Mimic' paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' />
       <h4 class="headline">Here is how you can use Mimic</h4>
       <div class="grid-container">
-        <GridButton title='Sanding'></GridButton>
-        <GridButton title='Griding'></GridButton>
-        <GridButton title='Control'></GridButton>
-        <GridButton title='Painting'></GridButton>
-        <GridButton title='Deburring'></GridButton>
-        <GridButton title='Finishing'></GridButton>
+        <GridButton title='Sanding' style="background-image: url(./src/assets/img/sanding.png); background-size:cover;" color='green' ></GridButton>
+        <GridButton title='Griding' style="background-image: url(./src/assets/img/grinding.png); background-size:cover;" color='green'></GridButton>
+        <GridButton title='Control' style="background-image: url(./src/assets/img/controll.png); background-size:cover;" color='green'></GridButton>
+        <GridButton title='Painting' style="background-image: url(./src/assets/img/painting.png); background-size:cover;" color='green'></GridButton>
+        <GridButton title='Deburring' style="background-image: url(./src/assets/img/deburring.png); background-size:cover;" color='green'></GridButton>
+        <GridButton title='Finishing' style="background-image: url(./src/assets/img/billede5.png); background-size:cover;" color='green'></GridButton>
       </div>
     </div>
 </template>

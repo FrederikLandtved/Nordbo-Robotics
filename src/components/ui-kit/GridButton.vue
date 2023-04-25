@@ -6,9 +6,11 @@
   })
 </script>
 
+<!-- Problem med text-shadow -->
 <template>
   <div class="grid-button-container">
-    <h2>{{ title }}</h2>
+    <h2 style="text-shadow: 20px 20px {{ color }};"> {{ title }}</h2>
+    
   </div>
 </template>
 
@@ -29,7 +31,7 @@
     h2 {
       color: white;
       font-weight: 500;
-      text-shadow: #02215C 1px 0 20px;
+      
     }
   }
 
