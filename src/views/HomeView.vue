@@ -1,6 +1,11 @@
 <script setup>
   import ProductCard from '@/components/ui-kit/ProductCard.vue'
   import GridButton from '@/components/ui-kit/GridButton.vue'
+  import { createUser, login } from '@/services/AuthService.js'
+
+  const createNewUser = () => {
+    login("frederiklandtved@hotmail.dk", "Hej123");
+  }
 </script>
 
 <template>
@@ -24,6 +29,7 @@
         <GridButton title='Deburring'></GridButton>
         <GridButton title='Finishing'></GridButton>
       </div>
+      <button @click="createNewUser()">Hej</button>
     </div>
 </template>
 
