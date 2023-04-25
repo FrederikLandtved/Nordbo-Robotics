@@ -1,10 +1,12 @@
 <script setup>
   import NavigationBar from '@/components/NavigationBar.vue'
   import { ref } from 'vue';
-  import { getAuth, onAuthStateChanged } from "firebase/auth";
-  
+  import { onAuthStateChanged } from "firebase/auth";
+  import { authentication } from '../firebase'
+
   const isAuthenticated = ref(false);
-  const auth = getAuth();
+  const auth = authentication;
+  
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // User is signed in

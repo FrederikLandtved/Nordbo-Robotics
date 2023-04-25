@@ -1,15 +1,6 @@
 <script setup>
   import ProductCard from '@/components/ui-kit/ProductCard.vue'
-  import GridButton from '@/components/ui-kit/GridButton.vue'
-  import { createUser, login, logOut as letsLogOut } from '@/services/AuthService.js'
-
-  const createNewUser = () => {
-    login("frederiklandtved@hotmail.dk", "Hej123");
-  }
-
-  const logOut = () => {
-    letsLogOut();
-  }
+  import GridButton from '@/components/ui-kit/GridButton.vue';  
 </script>
 
 <template>
@@ -33,8 +24,6 @@
         <GridButton title='Deburring'></GridButton>
         <GridButton title='Finishing'></GridButton>
       </div>
-      <button @click="createNewUser()">Log ind</button>
-      <button @click="logOut()">Log ud</button>
     </div>
 </template>
 
