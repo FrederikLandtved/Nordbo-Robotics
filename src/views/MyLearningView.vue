@@ -1,8 +1,15 @@
 <script setup>
   import router from '@/router'
+  import { ref } from 'vue'
 
 const goToRoute = (route) => {
   router.push({ path: route });
+}
+
+const isActive = ref("mylibary");
+
+const setActive = (newActive) => {
+  isActive.value = newActive;
 }
 </script>
 
@@ -34,13 +41,30 @@ const goToRoute = (route) => {
 
       </div>
 
-      <button class="myLibary">
+      <div class="profile-buttons">
+      <button @click="setActive('mylibary')" class="myLibary" :class="{ active: isActive === 'mylibary' }">
         My Libary
       </button>
-
-      <button class="download">
+      
+      <button @click="setActive('download')" class="download" :class="{active: isActive  === 'download' }">
         Download
       </button>
+    </div>
+    <div class="mylibary-box" v-if="isActive === 'mylibary'">
+    <h2>My Learning</h2>
+
+    <div class="complete-box">
+      <h3>Completed courses</h3>
+
+      <div class="course-box">
+        
+      </div>
+    </div>
+    </div>
+
+    <div class="download-box" v-if="isActive === 'download'">
+    <h2>My Learning</h2>
+    </div>
 
     </div>
 
@@ -112,12 +136,70 @@ $background-noti-aktiv:#eeeeee;
 
   }
 
-  .myLibary {
-
+  .profile-buttons {
+    //background-color: lime;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    .myLibary {
+      background-color: #ffffff;
+      border: 0;
+      border-radius: 12px 12px 0 0;
+      font-weight: 600;
+      height: 40px;
+      width: 180px;
   }
 
-  .download {
+    .download {
+      background-color: #FFFFFF;
+      border: 0;
+      border-radius: 12px 12px 0 0;
+      font-weight: 600;
+      height: 40px;
+      width: 180px;
+    }
 
+    .active {
+      background-color: #eeeeee;
+    }
   }
+
+  .mylibary-box {
+    background-color: #eeeeee;
+    height: 80vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    h2 {
+      padding: 20px 0 0 12px;
+    }
+
+    .complete-box {
+      background-color: lime;
+      height: 30vh;
+      padding: 12px;
+
+      h3 {
+        font-weight: 300;
+      }
+
+
+    }
+  }
+
+  .download-box {
+    background-color: #eeeeee;
+    height: 80vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    h2 {
+      padding: 20px 0 0 12px;
+    }
+  }
+
 }
 </style>
