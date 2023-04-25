@@ -56,8 +56,13 @@ const setActive = (newActive) => {
     <div class="complete-box">
       <h3>Completed courses</h3>
 
-      <div class="course-box">
-        
+      <div class="course-box-list">
+
+        <div class="course-box-item">
+          <div class="background-image"></div>
+          <div class="check-box"></div>
+        </div>
+
       </div>
     </div>
     </div>
@@ -169,6 +174,7 @@ $background-noti-aktiv:#eeeeee;
     background-color: #eeeeee;
     height: 80vh;
     left: 0;
+    overflow-x: scroll;
     position: absolute;
     width: 100%;
 
@@ -178,14 +184,46 @@ $background-noti-aktiv:#eeeeee;
 
     .complete-box {
       background-color: lime;
-      height: 30vh;
+      height: 35vh;
       padding: 12px;
 
       h3 {
         font-weight: 300;
       }
 
+      .course-box-list {
+        background-color: red;
+        left: 0;
+        margin-top: 5px;
+        margin-left: 12px;
+        position: absolute;
+        width: 195%;
 
+        .course-box-item {
+          background-color: blue;
+          height: 200px;
+          border-radius: 20px;
+          width: 216px;
+
+          .background-image {
+            background-color: purple;
+            border-radius: 20px 20px 0 0;
+            height: 100px;
+            position: absolute;
+            width: 216px;
+          }
+
+          .check-box {
+            background-color: deeppink;
+            border-radius: 12px;
+            height: 20px;
+            margin-left: 100px;
+            position: relative;
+            top: 10px;
+            width: 100px;
+          }
+        }
+      }
     }
   }
 
