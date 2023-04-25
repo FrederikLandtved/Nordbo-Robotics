@@ -22,7 +22,7 @@
   <main>
     <RouterView />
   </main>
-  <footer v-if="isAuthenticated">
+  <footer>
     <NavigationBar></NavigationBar>
   </footer>
 </template>
