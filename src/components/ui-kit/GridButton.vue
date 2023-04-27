@@ -40,7 +40,7 @@
 
     div{
       width: 40%;
-      background-color: green;
+      background-color: v-bind(color);
       height: 60px;
       filter: blur(12px);
       border-radius: 20px;
