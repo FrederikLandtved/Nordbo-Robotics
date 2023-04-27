@@ -17,7 +17,7 @@
       <ProductCard title='Mimic' paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' />
       <h4 class="headline">Here is how you can use Mimic</h4>
       <div class="grid-container">
-        <GridButton title='Sanding' style="background-image: url(./src/assets/img/sanding.png); background-size:cover;" color='green' ></GridButton>
+        <GridButton title='Sanding' style="background-image: url(./src/assets/img/sanding.png); background-size:cover;" color='blue' ></GridButton>
         <GridButton title='Griding' style="background-image: url(./src/assets/img/grinding.png); background-size:cover;" color='green'></GridButton>
         <GridButton title='Control' style="background-image: url(./src/assets/img/controll.png); background-size:cover;" color='green'></GridButton>
         <GridButton title='Painting' style="background-image: url(./src/assets/img/painting.png); background-size:cover;" color='green'></GridButton>

@@ -9,7 +9,10 @@
 <!-- Problem med text-shadow -->
 <template>
   <div class="grid-button-container">
-    <h2 style="text-shadow: 20px 20px {{ color }};"> {{ title }}</h2>
+    <div>
+      
+    </div>
+    <h2> {{ title }}</h2>
     
   </div>
 </template>
@@ -31,7 +34,20 @@
     h2 {
       color: white;
       font-weight: 500;
-      
+      margin-top: 0px;
+      position: relative;
+    }
+
+    div{
+      width: 40%;
+      background-color: green;
+      height: 60px;
+      filter: blur(12px);
+      border-radius: 20px;
+      border: 0;
+      position: absolute;
+      display: flex;
+      justify-content: center;
     }
   }
 
