@@ -1,5 +1,6 @@
 <script setup>
   import router from '@/router'
+  import CourseBox from '../components/ui-kit/CourseBox.vue';
   import { ref } from 'vue'
 
 const goToRoute = (route) => {
@@ -58,42 +59,14 @@ const setActive = (newActive) => {
 
       <div class="course-box-list">
 
-        <div class="course-box-item">
-          <div class="background-image" style="background-image: url(./src/assets/img/billede2.png);"></div>
-          <div class="check-box">
-            <h4>Gennemført</h4>
-            <img src="../assets/img/icons/Right.svg" alt="Checkmark">
-          </div>
-          <p>Sanding - Introduction</p>
-          <h4>Introduction to learn and use Mimic</h4>
-          <div class="author-calendar-box">
-            <img src="../assets/img/icons/profile.svg" alt="Man">
-            <h5>Jesper Jensen</h5>
-            <img src="../assets/img/icons/Kalender.svg" alt="Man">
-            <h5>25-07.2022</h5>
-          </div>
-        </div><!-- course-box-item -->
+      <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+      <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
 
-        <div class="course-box-item">
-          <div class="background-image" style="background-image: url(./src/assets/img/billede.png);"></div>
-          <div class="check-box">
-            <h4>Gennemført</h4>
-            <img src="../assets/img/icons/Right.svg" alt="Checkmark">
-          </div>
-          <p>Sanding - Setup</p>
-          <h4>Introduction to learn and use Mimic</h4>
-          <div class="author-calendar-box">
-            <img src="../assets/img/icons/profile.svg" alt="Man">
-            <h5>Gustav Simonsen</h5>
-            <img src="../assets/img/icons/Kalender.svg" alt="Man">
-            <h5>01-03.2022</h5>
-          </div>
-        </div><!-- course-box-item -->
+      </div><!-- course-box-list -->
+    </div><!-- complete-box -->
 
-        
 
-      </div>
-    </div>
+    
     </div>
 
     <div class="download-box" v-if="isActive === 'download'">
@@ -101,8 +74,9 @@ const setActive = (newActive) => {
     </div>
 
     </div>
+    </div>
 
-  </div>
+  <!--</div>-->
 </template>
 
 <style lang="scss" scoped>
@@ -224,12 +198,13 @@ $background-noti-aktiv:#eeeeee;
       .course-box-list {
         //background-color: red;
         display: flex;
+        flex-direction: row;
         left: 0;
         margin-top: 5px;
         position: absolute;
         width: 195%;
 
-        .course-box-item {
+/*        .course-box-item {
           background-color: #FFFFFF;
           height: 200px;
           border-radius: 20px;
@@ -305,7 +280,7 @@ $background-noti-aktiv:#eeeeee;
             padding-left: 7px;
             padding-top: 7px;
           }
-        }
+        }*/
       }
     }
   }
