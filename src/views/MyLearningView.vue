@@ -2,9 +2,9 @@
   import router from '@/router'
   import CourseBox from '../components/ui-kit/CourseBox.vue';
   import { ref } from 'vue'
-
-const goToRoute = (route) => {
-  router.push({ path: route });
+  import { logOut } from '@/services/AuthService.js';
+const logOutUser = () => {
+ logOut();
 }
 
 const isActive = ref("mylibary");
@@ -27,7 +27,7 @@ const setActive = (newActive) => {
         
         <div class="profile-info-header">
         <h1>Stefan Jespersen</h1>
-        <img src="../assets/img/icons/edit.svg" @click="goToRoute('/login')" alt="Edit">
+        <img src="../assets/img/icons/edit.svg" @click="logOutUser()" alt="Edit">
       </div>
 
         <div class="profile-info-item">

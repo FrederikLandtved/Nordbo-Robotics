@@ -1,14 +1,18 @@
 <script setup>
+  import { login } from '@/services/AuthService.js';
 
+  const logInUser = () => {
+    login();
+  }
 </script>
 
 
 <template>
     
 <div class="background">
-    <img src="../assets/img/nordbo-icon.png" style="display:block; padding-top: 40%; margin-left: auto; margin-right: auto;">
+    <img src="../assets/img/nordbo-icon.png">
         <div class="login-btn">
-            <button style="background-color:#02215C;">Log in</button> 
+            <button @click="logInUser()" style="background-color:#02215C;">Log in</button> 
             <button class="signUp">Sign up</button>
             <a href="#">Forgot password?</a>
         </div>
@@ -23,12 +27,14 @@
 .background{
    
     background-image:url("../assets/img/login-background.png");
-    background-size:auto;
+    background-size: auto;
     background-position: 15% 65%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
 }
 
 
@@ -36,7 +42,6 @@
    
     display: flex;
     justify-content: center;
-    padding-top: 50%;
     flex-direction: column;
     align-items: center;
     
@@ -55,9 +60,10 @@
     .signUp{
         color:black;
     }
-    
-    
+}
 
+img {
+  height: 50px;
 }
 
 </style>

@@ -8,7 +8,7 @@
   const auth = authentication;
   
   onAuthStateChanged(auth, (user) => {
-    if (user) {
+    if (user !== null) {
       // User is signed in
       isAuthenticated.value = true;
     } else {
@@ -22,7 +22,7 @@
   <main>
     <RouterView />
   </main>
-  <footer>
+  <footer v-if="isAuthenticated">
     <NavigationBar></NavigationBar>
   </footer>
 </template>

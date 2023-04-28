@@ -42,6 +42,7 @@
     justify-content: center;
     cursor: pointer;
     background-color:#f2f2f2;
+    gap: 4px;
 
     p{
       font-size: 10px;
