@@ -13,16 +13,16 @@ defineProps({
 <div class="course-box-item">
     <div class="background-image" style="background-image: url(./src/assets/img/billede.png);"></div>
         <div class="check-box">
-        <h4>Gennemført</h4>
-        <img src="@/assets/img/icons/Right.svg" alt="Checkmark">
+          <h4>Gennemført</h4>
+          <img src="@/assets/img/icons/Right.svg" alt="Checkmark">
         </div>
         <p>{{ title }}</p>
         <h4>{{ description }}</h4>
         <div class="author-calendar-box">
-        <img src="@/assets/img/icons/profile.svg" alt="Man">
-        <h5>{{ author }}</h5>
-        <img src="@/assets/img/icons/Kalender.svg" alt="Man">
-        <h5>{{date}}</h5>
+          <img src="@/assets/img/icons/profile.svg" alt="Man">
+          <h5>{{ author }}</h5>
+          <img src="@/assets/img/icons/Kalender.svg" alt="Man">
+          <h5>{{date}}</h5>
         </div>
         </div><!-- course-box-item -->
 </template>
@@ -72,27 +72,32 @@ defineProps({
 
         p {
           color: $buttonColor;
-          margin-top: 85px;
+          margin-top: 90px;
           margin-left: 10px;
+          font-size: 12px;
         }
 
         h4 {
           margin-top: 5px;
           margin-left: 10px;
+          font-size: 14px;
+          font-weight: 400;
         }
 
         .author-calendar-box {
           border-top: 1px solid #f4f4f4;
           display: flex;
           flex-direction: row;
+          align-items: center;
           height: 20px;
           margin: 0 auto;
-          margin-top: 10px;
+          margin-top: 26px;
           width: 90%;
 
           img {
-            height: 20px;
+            height: 15px;
             padding: 0;
+            padding-top: 3px
           }
 
           img:nth-child(3) {
@@ -101,9 +106,10 @@ defineProps({
 
           h5 {
             color: #B7B7B7;
-            font-size: 10px;
+            font-size: 11px;
             padding-left: 7px;
             padding-top: 7px;
+            font-weight: 400;
           }
         }
 </style>
