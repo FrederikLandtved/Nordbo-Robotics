@@ -11,7 +11,7 @@ $background-noti-aktiv:#eeeeee;
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
-  color:$textColor
+  color:$textColor;
 }
 
 
@@ -53,6 +53,52 @@ footer {
       margin-top: -70px;
       max-width: 100%;
     }
+  }
+}
+
+// Inputs used in Login and Signup
+.login-input {
+  border-bottom: 1.5px solid white;
+  padding: 2px 0;
+  margin-bottom: 30px;
+  width: 250px;
+  display: flex;
+
+  span {
+    color: white;
+    font-size: 16px;
+  }
+
+  input {
+    border: 0;
+    background-color: unset;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+
+.login-btn{ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  button{
+      width: 220px;
+      height: 70px;
+      border-radius: 10px;
+      margin-bottom:30px ;
+      color: white;
+      border:none;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 4px 8px 0px;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+  .signUp{
+      color:black;
   }
 }
 

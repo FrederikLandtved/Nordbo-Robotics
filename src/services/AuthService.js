@@ -10,7 +10,7 @@ export const createUser = (email, password) => {
       // Signed in 
       const user = userCredential.user;
       console.log(user);
-      // ...
+      goToRoute("/");
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -22,16 +22,17 @@ export const createUser = (email, password) => {
 export const login = (email, password) => {
   const authInstance = authentication;
 
-  signInWithEmailAndPassword(authInstance, "frederiklandtved@hotmail.dk", "Hej123")
+  signInWithEmailAndPassword(authInstance, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      goToRoute("/");
+      if(user){
+        goToRoute("/");
+      }
       // ...
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      console.log(error);
     });
 }
 
@@ -40,7 +41,7 @@ export const logOut = () => {
 
   signOut(authInstance).then(() => {
     // Sign-out successful.
-    goToRoute("login");
+    goToRoute("auth");
   }).catch((error) => {
     // An error happened.
   });

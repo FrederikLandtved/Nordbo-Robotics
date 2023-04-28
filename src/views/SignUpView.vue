@@ -1,15 +1,20 @@
 <script setup>
   import { goToRoute } from '@/services/NavigationService.js'
-  import { login } from '@/services/AuthService.js'
+  import { createUser } from '@/services/AuthService.js'
   import { ref } from 'vue';
 
   const email = ref('');
+  const name = ref('');
   const password = ref('');
 
-  const logInUser = () => {
+  const goToLogin = () => {
+    goToRoute("login");
+  }
+
+  const signUpUser = () => {
     // Needs validation
-    if(email.value !== '' && password.value !== ''){
-      login(email.value, password.value);
+    if(email.value !== '' && name.value !== '' && password.value !== ''){
+      createUser(email.value, password.value);
     }
   }
 </script>
@@ -21,20 +26,27 @@
     </div>    
     <div class="flex-item items-start">
       <div class="login-btn">
-        <p>Log ind som bruger</p>
+      <p>Sign up som bruger</p>
 
-        <div class="login-input">
-          <span>Email: </span>
-          <input type="text" v-model="email">
-        </div>
-        <div class="login-input">
-          <span>Adgangskode: </span>
-          <input type="password" v-model="password">
-        </div>
-        <div class="login-btn">
-          <button @click="logInUser()" style="background-color:#02215C;">Sign up</button> 
-        </div> 
-      </div>  
+      <div class="login-input">
+        <span>Email: </span>
+        <input type="text" v-model="email">
+      </div>
+      <div class="login-input">
+        <span>Navn: </span>
+        <input type="text" v-model="name">
+      </div>
+      <div class="login-input">
+        <span>Adgangskode: </span>
+        <input type="password" v-model="password">
+      </div>
+      <div class="login-btn">
+        <button @click="signUpUser()" style="background-color:#02215C;">Sign up</button> 
+      </div> 
+        </div>  
+    </div>
+    <div @click="goToLogin()" class="flex-end">
+      Har du allerede en profil?
     </div>
   </div>
 </template>
