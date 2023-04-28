@@ -32,7 +32,7 @@
           <input type="password" v-model="password">
         </div>
         <div class="login-btn">
-          <button @click="logInUser()" style="background-color:#02215C;">Sign up</button> 
+          <button @click="logInUser()" style="background-color:#02215C;">Log in</button> 
         </div> 
       </div>  
     </div>
