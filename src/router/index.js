@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { authentication } from '../../firebase';
+
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
@@ -7,17 +9,26 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/mylearning',
       name: 'mylearning',
-      component: () => import('../views/MyLearningView.vue')
+      component: () => import('../views/MyLearningView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/notifications',
       name: 'notifications',
-      component: () => import('../views/NotificationsView.vue')
+      component: () => import('../views/NotificationsView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/auth',
@@ -35,6 +46,17 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue')
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  const currentUser = authentication.currentUser
+
+  if (requiresAuth && !currentUser) {
+    next('/auth') // redirect to authentication page if not authenticated
+  } else {
+    next() // proceed to next route
+  }
 })
 
 export default router

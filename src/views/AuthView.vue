@@ -19,7 +19,7 @@
         <div class="login-btn">
             <button @click="goToLogIn()" style="background-color:#02215C;">Log in</button> 
             <button @click="goToSignUp()" class="signUp">Sign up</button>
-            <a href="#">Forgot password?</a>
+            <!-- <a href="#">Forgot password?</a> -->
         </div>    
     </div>
   </div>

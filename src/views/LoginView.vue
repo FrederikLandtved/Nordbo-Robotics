@@ -33,8 +33,11 @@
         </div>
         <div class="login-btn">
           <button @click="logInUser()" style="background-color:#02215C;">Log in</button> 
-        </div> 
+        </div>
       </div>  
+    </div>
+    <div @click="goToRoute('/auth')" class="flex-end">
+      Tilbage
     </div>
   </div>
 </template>
