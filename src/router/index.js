@@ -55,8 +55,6 @@ router.beforeEach((to, from, next) => {
   if (requiresAuth && !currentUser) {
     next('/auth') // redirect to authentication page if not authenticated
   } else {
-    console.log(currentUser);
-
     next() // proceed to next route
   }
 })
