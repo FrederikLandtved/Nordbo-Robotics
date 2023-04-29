@@ -10,9 +10,9 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/mylearning',
@@ -55,6 +55,8 @@ router.beforeEach((to, from, next) => {
   if (requiresAuth && !currentUser) {
     next('/auth') // redirect to authentication page if not authenticated
   } else {
+    console.log(currentUser);
+
     next() // proceed to next route
   }
 })
