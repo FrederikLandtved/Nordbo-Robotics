@@ -1,15 +1,19 @@
 import { authentication } from "../../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { goToRoute } from "./NavigationService";
 
-export const createUser = (email, password) => {
+export const createUser = (email, password, name) => {
   const authInstance = authentication;
 
   createUserWithEmailAndPassword(authInstance, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      goToRoute("/");
+      updateProfile(authInstance.currentUser, {
+        displayName: name
+      }).then(() => {
+        goToRoute("/");
+      });
     })
     .catch((error) => {
       const errorCode = error.code;
