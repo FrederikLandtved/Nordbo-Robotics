@@ -1,6 +1,18 @@
 <script setup>
   import ProductCard from '@/components/ui-kit/ProductCard.vue'
   import GridButton from '@/components/ui-kit/GridButton.vue';  
+  import { getTutorials } from '@/services/TutorialService.js';
+  import { ref, onMounted } from 'vue';
+
+  const tutorials = ref([]);
+
+  onMounted(() => {
+    tutorials.value = getTutorials().then((tutorialArray) => { 
+      tutorials.value = tutorialArray;
+      console.log(tutorialArray)
+    });
+  })
+  
 </script>
 
 <template>
@@ -16,13 +28,14 @@
     <div class="home-page--container">
       <ProductCard title='Mimic' paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' />
       <h4 class="headline">Here is how you can use Mimic</h4>
-      <div class="grid-container">
-        <GridButton title='Sanding' style="background-image: url('../src/assets/img/sanding.png'); background-size:cover;" color='rgba(2,33,92,0.73)'></GridButton>
-        <GridButton title='Griding' style="background-image: url('../src/assets/img/grinding.png'); background-size:cover;" color='#615946'></GridButton>
-        <GridButton title='Control' style="background-image: url('../src/assets/img/controll.png'); background-size:cover;" color='#765B4B'></GridButton>
-        <GridButton title='Painting' style="background-image: url('../src/assets/img/painting.png'); background-size:cover;" color='#5D7D84'></GridButton>
-        <GridButton title='Deburring' style="background-image: url('../src/assets/img/deburring.png'); background-size:cover;" color='#5A5C5E'></GridButton>
-        <GridButton title='Finishing' style="background-image: url('../src/assets/img/billede5.png'); background-size:cover;" color='#3B3D42'></GridButton>
+      <div class="grid-container" v-if="tutorials.length > 0">
+        <GridButton
+          v-for="(item, index) in tutorials"
+          v-bind:key="index"
+          :title="item.name"
+          :image="item.imageUrl"
+          :color="item.color"
+        />
       </div>
     </div>
 </template>

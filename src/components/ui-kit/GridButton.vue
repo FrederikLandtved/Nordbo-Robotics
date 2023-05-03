@@ -1,14 +1,19 @@
 <script setup>
-  defineProps({
+import { ref } from 'vue';
+
+  const props = defineProps({
     title: String,
     color: String,
     image: String
   })
+
+  console.log(props);
+
 </script>
 
 <!-- Problem med text-shadow -->
 <template>
-  <div class="grid-button-container">
+  <div class="grid-button-container" :style="'background-image: url(' + image + ');'">
     <div>
       
     </div>
@@ -21,6 +26,7 @@
   @import "@/assets/main.scss";
 
   .grid-button-container {
+    background-size: cover;
     background-color: lightgrey;
     border-radius: 12px;
     width: 100%;

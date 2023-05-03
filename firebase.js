@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDAGGzIlAa7n_zmQ9W2V8csiKgnocNc5PQ",
@@ -15,15 +15,5 @@ const app = initializeApp(firebaseConfig);
 
 const authentication = getAuth(app);
 const database = getFirestore(app);
-
-// const myCollectionRef = collection(database, 'tutorials');
-//  var hej = [];
-// getDocs(myCollectionRef).then((querySnapshot) => {
-//   querySnapshot.forEach((doc) => {
-//     hej.push(doc.data());
-//   });
-//   console.log(hej);
-// });
-
 
 export { authentication, database };
