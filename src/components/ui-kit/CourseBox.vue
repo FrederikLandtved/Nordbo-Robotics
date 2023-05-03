@@ -35,6 +35,8 @@ defineProps({
           border-radius: 20px;
           margin-left: 12px;
           width: 216px;
+          box-shadow: 0 8px 5px -4px lightgrey;
+
 
           .background-image {
             

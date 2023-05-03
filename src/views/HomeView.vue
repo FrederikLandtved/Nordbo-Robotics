@@ -130,8 +130,5 @@
     grid-row-gap: 8px;
   }
 
-  .item {
-    background-color: #ddd;
-    padding: 20px;
-  }
+
 </style>
