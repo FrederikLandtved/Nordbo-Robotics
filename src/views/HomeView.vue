@@ -9,7 +9,6 @@
   onMounted(() => {
     tutorials.value = getTutorials().then((tutorialArray) => { 
       tutorials.value = tutorialArray;
-      console.log(tutorialArray)
     });
   })
   
