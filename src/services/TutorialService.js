@@ -9,6 +9,8 @@ export const getTutorials = () => {
      querySnapshot.forEach((doc) => {
       tutorialArray.push(doc.data());
      });
+
+     tutorialArray.sort((a, b) => a.sortOrder - b.sortOrder);
      
      return tutorialArray;
  });
