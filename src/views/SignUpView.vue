@@ -14,7 +14,7 @@
   const signUpUser = () => {
     // Needs validation
     if(email.value !== '' && name.value !== '' && password.value !== ''){
-      createUser(email.value, password.value);
+      createUser(email.value, password.value, name.value);
     }
   }
 </script>
