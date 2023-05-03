@@ -12,7 +12,7 @@
       <h2>{{ title }}</h2>
       <p>{{ paragraph }}</p>
       </div>
-    <div class="product-card-container__item--image" style="background-image: url('https://images.unsplash.com/photo-1610891015188-5369212db097?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1529&q=80')">
+    <div class="product-card-container__item--image" :style="'background-image: url(' + image + ')'">
     </div>
   </div>
 </template>

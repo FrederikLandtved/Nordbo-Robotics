@@ -3,9 +3,20 @@
   import GridButton from '@/components/ui-kit/GridButton.vue';  
   import { getTutorials } from '@/services/TutorialService.js';
   import { ref, onMounted } from 'vue';
+  import { getAuth } from "firebase/auth";
+  import { onAuthStateChanged } from "firebase/auth";
+  import { authentication } from '../../firebase'
 
+  const auth = authentication;
   const tutorials = ref([]);
+  const displayName = ref('Loading..');
 
+  onAuthStateChanged(auth, (user) => {
+    if (user !== null) {
+      // User is signed in
+      displayName.value = user.displayName;
+    }
+  });
   onMounted(() => {
     // Get tutorials from Firebase and add it to this components tutorials reference.
     tutorials.value = getTutorials().then((tutorialArray) => { 
@@ -18,7 +29,7 @@
 <template>
   <div class="header--container">
     <div class="header--container__initials">
-      <span>IDN</span>
+      <span>{{ displayName }}</span>
     </div>
     <div class="header--container__search">
       <img src="@/assets/img/icons/search.svg">
@@ -26,7 +37,11 @@
     </div>
   </div>
     <div class="home-page--container">
-      <ProductCard title='Mimic' paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' />
+      <ProductCard 
+        title='Mimic' 
+        paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' 
+        image='../src/assets/img/mimic1.png'  
+      />
       <h4 class="headline">Here is how you can use Mimic</h4>
       <div class="grid-container" v-if="tutorials.length > 0">
         <GridButton
