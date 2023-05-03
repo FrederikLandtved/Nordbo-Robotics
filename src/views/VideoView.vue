@@ -31,20 +31,96 @@
   <button @click="setActive('QA')" class="video-tab-buttons" :class="{ active: isActive === 'QA' }">
     Q/A
   </button>
-</div>
+</div><!-- Video Buttons -->
 
 <div class="oversigt-box aktiv" v-if="isActive === 'oversigt'">
-  div.
-<h3>Introduction to learn and use Mimic</h3>
-</div><!-- Oversigt -->
+
+  <div class="oversigt-slide">
+    <div class="oversigt-slide-title">
+      <h3>Introduction to learn and use Mimic</h3>
+    <img src="../assets/img/icons/arrow-down.png" alt="">
+    </div>
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to unpacking - 1/3</p>
+    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to unpacking - 2/3</p>
+    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to unpacking - 3/3</p>
+    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+  </div><!-- Checkbox Row -->
+  </div><!-- oversigt-slide -->
+
+  <div class="oversigt-slide">
+    <div class="oversigt-slide-title">
+      <h3>Set up Mimic software to your robot</h3>
+    <img src="../assets/img/icons/arrow-down.png" alt="">
+    </div>
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to setting up - 1/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to setting up - 2/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>Introduction to setting up - 3/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+  </div><!-- oversigt-slide -->
+
+  <div class="oversigt-slide">
+    <div class="oversigt-slide-title">
+      <h3>How to calibrate Mimic to your robot</h3>
+    <img src="../assets/img/icons/arrow-down.png" alt="">
+    </div>
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>How to calibrate Mimic - 1/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>How to calibrate Mimic - 2/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+
+  <div class="checkbox-row">
+    <div class="blue-border-box"></div>
+    <p>How to calibrate Mimic - 3/3</p>
+    <div class="circle-box"></div>
+  </div><!-- Checkbox Row -->
+  </div><!-- oversigt-slide -->
+
+  
+
+</div><!-- Oversigt Box -->
 
 <div class="transkribering-box aktiv" v-if="isActive === 'transkribering'">
   <h3>t</h3>
-</div><!-- Transkribering -->
+</div><!-- Transkribering Box -->
 
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
   <h3>q</h3>
-</div><!-- Q/A -->
+</div><!-- Q/A Box -->
 
 </template>
 
@@ -110,15 +186,72 @@
     }
 
 .oversigt-box {
-  height: 80vh;
+  //background-color: lime;
+  box-sizing: border-box;
+  height: 120vh;
   left: 0;
+  padding: 15px;
   position: absolute;
   width: 100%;
 
-  h3 {
-    font-size: 14px;
-    padding: 15px 0 0 15px;
+  .oversigt-slide {
+    border-bottom: 1px solid #707070;
+    height: 140px;
+    margin-top: 20px;
+    width: 98%;
+
+    .oversigt-slide-title {
+      display: flex;
+
+      h3 {
+      font-size: 14px;
+    }
+
+      img {
+      height: 10px;
+      margin-left: 85px;
+      //margin-top: 20px;
+      width: auto;
+    }
+    }
+
+    .checkbox-row {
+      //background-color: red;
+      display: flex;
+      height: 10px;
+      margin-top: 15px;
+      width: 100%;
+
+      .blue-border-box {
+        border-left: 1px solid #054BD0;
+        border-bottom: 1px solid #054BD0;
+        height: 10px;
+        width: 10px;
+      }
+
+      p {
+        font-size: 12px;
+        margin-left: 10px;
+      }
+
+      img {
+        height: 12px;
+        margin-left: 18px;
+        width: 5%;
+      }
+
+      .circle-box {
+        border: 1px solid #323232;
+        border-radius: 100%;
+        height: 8px;
+        margin-left: 18px;
+        margin-top: 2px;
+        width: 8px;
+      }
+    }
   }
+
+
 }
 
 .transkribering-box {
