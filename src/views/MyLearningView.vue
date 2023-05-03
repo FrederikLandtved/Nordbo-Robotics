@@ -3,15 +3,27 @@
   import CourseBox from '../components/ui-kit/CourseBox.vue';
   import { ref } from 'vue'
   import { logOut } from '@/services/AuthService.js';
-const logOutUser = () => {
- logOut();
-}
+  import { onAuthStateChanged } from "firebase/auth";
+  import { authentication } from '../../firebase'
 
-const isActive = ref("mylibary");
+  const auth = authentication;
+  const displayName = ref('Loading..');
+  const isActive = ref("mylibary");
 
-const setActive = (newActive) => {
-  isActive.value = newActive;
-}
+  onAuthStateChanged(auth, (user) => {
+    if (user !== null) {
+      // User is signed in
+      displayName.value = user.displayName;
+    }
+  });
+
+  const logOutUser = () => {
+  logOut();
+  }
+
+  const setActive = (newActive) => {
+    isActive.value = newActive;
+  }
 </script>
 
 <template>
@@ -21,10 +33,10 @@ const setActive = (newActive) => {
     
     <div class="profile">
       <div class="profile-info">       
-        <img src="../assets/img/stefan.jpg" alt="Profile Picture">
+        <img src="../assets/img/user-placeholder.jpg" alt="Profile Picture">
         
         <div class="profile-info-header">
-          <h1>Stefan asdasd</h1>
+          <h1>{{ displayName }}</h1>
           <img src="../assets/img/icons/edit.svg" @click="logOutUser()" alt="Edit">
         </div>
 
