@@ -6,6 +6,7 @@
   import { getAuth } from "firebase/auth";
   import { onAuthStateChanged } from "firebase/auth";
   import { authentication } from '../../firebase'
+  import router from '@/router'
 
   const auth = authentication;
   const tutorials = ref([]);
@@ -24,6 +25,9 @@
     });
   })
   
+  const goToRoute = (route) => {
+    router.push({ path: route });
+  }
 </script>
 
 <template>
@@ -46,6 +50,7 @@
       <div class="grid-container" v-if="tutorials.length > 0">
         <GridButton
           v-for="(item, index) in tutorials"
+          @click="goToRoute('/tutorial')"
           v-bind:key="index"
           :title="item.name"
           :image="item.imageUrl"
