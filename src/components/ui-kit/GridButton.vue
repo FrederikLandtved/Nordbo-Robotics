@@ -7,8 +7,6 @@ import { ref } from 'vue';
     image: String
   })
 
-  console.log(props);
-
 </script>
 
 <!-- Problem med text-shadow -->
