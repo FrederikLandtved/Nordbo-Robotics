@@ -21,10 +21,14 @@ defineProps({
     <p>{{ title }}</p>
     <h4>{{ description }}</h4>
     <div class="author-calendar-box">
-      <img src="@/assets/img/icons/profile.svg" alt="Man">
-      <h5>{{ author }}</h5>
-      <img src="@/assets/img/icons/Kalender.svg" alt="Man">
-      <h5>{{date}}</h5>
+      <div>
+        <img src="@/assets/img/icons/profile.svg" alt="Man">
+        <h5>{{ author }}</h5>
+      </div>
+      <div>
+        <img src="@/assets/img/icons/Kalender.svg" alt="Man">
+        <h5>{{date}}</h5>
+      </div>
     </div>
   </div><!-- course-box-item -->
 </template>
@@ -97,10 +101,15 @@ defineProps({
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     height: 20px;
     margin: 0 auto;
     margin-top: 26px;
     width: 90%;
+
+    div {
+      display: flex;
+    }
 
     img {
       height: 15px;
