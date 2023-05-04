@@ -47,68 +47,57 @@ const setActive = (newActive) => {
         <button @click="setActive('mimic')" class="profile-tab-button" :class="{active: isActive  === 'mimic' }">
             Mimic
         </button>
-      </div>
+    </div>
 
-
-  <div v-if="isActive ==='all'"> 
-
-  <div class="mylibary-box">
-      
-    
-        <h2>Introduction</h2>
-            <div class="complete-box">
-                <div class="course-box-list">
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                </div>
+    <div class="mylibary-box" v-if="isActive ==='all'">
+      <div class="mylibrary-box-item">
+          <h2>Introduction</h2>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
             </div>
-    
-        <h2>Setup</h2>
-        <div class="complete-box">
-                <div class="course-box-list">
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                  <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-                </div>
-            </div>   
-       
-        <h2>Calibration</h2>
-
-        <h2>Mimic</h2>
-  
-  </div>
-</div>    
-       
-        
-      
-
-        <div class="mylibary-box" v-if="isActive === 'introduction'">
-    
-
-    <div class="complete-box">
-      
-
-      <div class="course-box-list">
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+      </div>
+      <div class="mylibrary-box-item">
+          <h2>Setup</h2>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+            </div>
+      </div>
+      <div class="mylibrary-box-item">
+          <h2>Setup</h2>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+            </div>
       </div>
     </div>
+
+    <div class="mylibary-box" v-if="isActive !=='all'">
+      <div class="mylibrary-box-item">
+          <h2>Alt muligt andet hehe</h2>
+            <div class="course-box-list vertical">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+            </div>
+      </div>
     </div>
-    
-
-      <div class="setup-box aktiv" v-if="isActive === 'setup'">
-        <h2>setup</h2>
-      </div>
-
-      <div class="calibration-box aktiv" v-if="isActive === 'calibration'">
-        <h2>calibration</h2>
-      </div>
-
-      <div class="mimic-box aktiv" v-if="isActive === 'mimic'">
-        <h2>mimic</h2>
-      </div>
 </template>
 
 
@@ -173,6 +162,7 @@ const setActive = (newActive) => {
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin-top: 6px;
 
     .profile-tab-button {
       background-color: #ffffff;
@@ -201,20 +191,10 @@ const setActive = (newActive) => {
    
   }
 
-
-
-
   .mylibary-box {
-    background-color: #eeeeee;
-    height: 80vh;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    overflow-x: scroll;
-
-    h2 {
-      padding: 20px 0 0 12px;
-    }
+    background-color: #f1f1f1;
+    height: calc(100vh - 350px);
+    overflow-y: scroll;
 
     .complete-box {
       height: 30vh;
@@ -225,22 +205,28 @@ const setActive = (newActive) => {
         font-weight: 500;
         font-size: 14px;
       }
+    }
+
+    .mylibrary-box-item {
+      overflow: hidden;
+      padding: 20px 10px;
 
       .course-box-list {
         display: flex;
         flex-direction: row;
-        left: 0;
         margin-top: 5px;
-        position: absolute;
-        width: 195%;
-       
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 220px;
+        padding-right: 10px;
 
+        &.vertical {
+          flex-direction: column;
+          height: unset;
+          padding-right: 0;
+        }
       }
     }
   }
-  
-
-
-      
 
 </style>
