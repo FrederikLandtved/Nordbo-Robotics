@@ -12,7 +12,7 @@ defineProps({
 <template>
 
 <div class="course-box-item" :class="{fullwidth: fullWidth}">
-    <div class="background-image" style="background-image: url(./src/assets/img/billede.png);">
+    <div class="course-box-item__image" style="background-image: url(./src/assets/img/billede.png);">
         <div class="check-box">
           <h4>Gennemført</h4>
           <img src="@/assets/img/icons/Right.svg" alt="Checkmark">
@@ -20,7 +20,7 @@ defineProps({
     </div>
     <p>{{ title }}</p>
     <h4>{{ description }}</h4>
-    <div class="author-calendar-box">
+    <div class="course-box-item__author-calendar-box">
       <div>
         <img src="@/assets/img/icons/profile.svg" alt="Man">
         <h5>{{ author }}</h5>
@@ -43,13 +43,9 @@ defineProps({
     min-width: 216px;
     box-shadow: 0 8px 5px -4px lightgrey;
 
-    &.fullwidth {
-      width: 100%;
-      margin-bottom: 30px;
-      margin-right: 0;
-    }
+  
     
-    .background-image {
+    &__image{
       background-size: cover;
       background-position-y: -30px;
       border-radius: 20px 20px 0 0;
@@ -58,6 +54,44 @@ defineProps({
       position: relative;
     }
 
+    &__author-calendar-box {
+    border-top: 1px solid #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 26px;
+    width: 90%;
+
+    div {
+      display: flex;
+    }
+
+    img {
+      height: 15px;
+      padding: 0;
+      padding-top: 3px
+    }
+
+    img:nth-child(3) {
+      padding-left: 10px;
+    }
+
+    h5 {
+      color: #B7B7B7;
+      font-size: 11px;
+      padding-left: 7px;
+      padding-top: 7px;
+      font-weight: 400;
+    }
+  }
+    &.fullwidth {
+      width: 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
     .check-box {
       background-color: #FFFFFF;
       border-radius: 12px;
@@ -96,37 +130,5 @@ defineProps({
     font-weight: 400;
   }
 
-  .author-calendar-box {
-    border-top: 1px solid #f4f4f4;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 20px;
-    margin: 0 auto;
-    margin-top: 26px;
-    width: 90%;
 
-    div {
-      display: flex;
-    }
-
-    img {
-      height: 15px;
-      padding: 0;
-      padding-top: 3px
-    }
-
-    img:nth-child(3) {
-      padding-left: 10px;
-    }
-
-    h5 {
-      color: #B7B7B7;
-      font-size: 11px;
-      padding-left: 7px;
-      padding-top: 7px;
-      font-weight: 400;
-    }
-  }
 </style>

@@ -33,7 +33,7 @@
     
     <div class="profile">
       <div class="profile-info">       
-        <img src="../assets/img/user-placeholder.jpg" alt="Profile Picture">
+        <img src="../assets/img/user-placeholder.jpg" class="profilPic" alt="Profile Picture">
         
         <div class="profile-info-header">
           <h1>{{ displayName }}</h1>
@@ -61,20 +61,28 @@
           Download
         </button>
       </div>
-    <div class="mylibary-box" v-if="isActive === 'mylibary'">
-    <h2>My Learning</h2>
-
-    <div class="complete-box">
-      <h3>Completed courses</h3>
-
-      <div class="course-box-list">
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-        <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-      </div><!-- course-box-list -->
-    </div><!-- complete-box -->
-
-
+      <div class="mylibary-box" v-if="isActive ==='mylibary'">
+      <div class="mylibrary-box-item">
+          <h2>My Learning</h2>
+          <h4>Completed Corses</h4>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+            </div>
+            <h4>Ongoing Corses</h4>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+            </div>
+      </div>
     
     </div>
 
@@ -100,10 +108,17 @@ $background-noti-aktiv:#eeeeee;
 
 
   .profile-info {
+    padding:15px;
+    .profilPic{
+      margin-top: -50px;
+
+      
+    }
     img {
         padding: 0;
         border-radius: 100%;
-        width: 100px
+        width: 100px;
+        
       }
 
       .profile-info-header {
@@ -149,7 +164,7 @@ $background-noti-aktiv:#eeeeee;
 
     img:nth-child(6) {
         float: left;
-        padding: 13px 0 0 0;
+        padding: 0 0 0 0;
         width: 10px;
       }
 
@@ -176,33 +191,43 @@ $background-noti-aktiv:#eeeeee;
   }
 
   .mylibary-box {
-    background-color: #eeeeee;
-    height: 80vh;
-    left: 0;
-    overflow-x: scroll;
-    position: absolute;
-    width: 100%;
-
-    h2 {
-      padding: 20px 0 0 12px;
-    }
+    background-color: #f1f1f1;
+    height: calc(100vh - 350px);
+    overflow-y: scroll;
 
     .complete-box {
       height: 30vh;
-      padding: 12px;
+      
+
 
       h3 {
         font-weight: 500;
         font-size: 14px;
       }
+    }
+
+    .mylibrary-box-item {
+      overflow: hidden;
+      padding: 20px 10px;
+
+      h4{
+        margin-top:30px;
+      }
 
       .course-box-list {
         display: flex;
         flex-direction: row;
-        left: 0;
         margin-top: 5px;
-        position: absolute;
-        width: 195%;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 220px;
+        padding-right: 10px;
+
+        &.vertical {
+          flex-direction: column;
+          height: unset;
+          padding-right: 0;
+        }
       }
     }
   }
@@ -214,9 +239,7 @@ $background-noti-aktiv:#eeeeee;
     position: absolute;
     width: 100%;
 
-    h2 {
-      padding: 20px 0 0 12px;
-    }
+   
   }
 
 }
