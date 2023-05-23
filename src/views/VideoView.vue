@@ -125,146 +125,137 @@
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/main.scss";
-
-
-.video-box {
-  background-color: $iconGreen;
-  height: 212px;
-  width: 100%;
-
-  img {
-    padding-top: 15px;
-    padding-left: 15px;
-  }
-}
-
-.video-info {
-  //background-color: $iconColor;
-  display: flex;
-  height: 10vh;
-  width: 100%;
-
-  h2 {
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  img {
-    height: 12px;
-    margin-left: 75px;
-    margin-top: 18px;
-    width: 10%;
-  }
-}
-
-.video-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  @import "@/assets/main.scss";
+  .video-box {
+    background-color: $iconGreen;
+    height: 212px;
     width: 100%;
 
-    .video-tab-buttons {
-      background-color: #ffffff;
-      border: 0;
-      border-radius: 12px 12px 0 0;
-      font-weight: 500;
-      padding: 10px;
-      height: 40px;
-      //width: 120px;
+    img {
+      padding-top: 15px;
+      padding-left: 15px;
     }
+  }
 
-    .active {
-      background-color: #eeeeee;
-    }
+  .video-info {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
 
-
-}
-
-.aktiv {
-      background-color: #eeeeee;
-    }
-
-.oversigt-box {
-  //background-color: lime;
-  box-sizing: border-box;
-  height: 120vh;
-  left: 0;
-  padding: 15px;
-  position: absolute;
-  width: 100%;
-
-  .oversigt-slide {
-    border-bottom: 1px solid #707070;
-    height: 140px;
-    margin-top: 20px;
-    width: 98%;
-
-    .oversigt-slide-title {
-      display: flex;
-
-      h3 {
+    h2 {
       font-size: 14px;
+      padding: 15px;
     }
 
-      img {
+    img {
       height: 10px;
-      margin-left: 85px;
-      //margin-top: 20px;
-      width: auto;
+      margin-left: 75px;
+      margin-top: 18px;
+      width: 10%;
     }
-    }
+  }
 
-    .checkbox-row {
-      //background-color: red;
+  .video-buttons {
       display: flex;
-      height: 10px;
-      margin-top: 15px;
+      flex-direction: row;
+      justify-content: space-around;
       width: 100%;
 
-      .blue-border-box {
-        border-left: 1px solid #054BD0;
-        border-bottom: 1px solid #054BD0;
+      .video-tab-buttons {
+        background-color: #ffffff;
+        border: 0;
+        border-radius: 12px 12px 0 0;
+        font-weight: 500;
+        padding: 10px;
+        height: 40px;
+      }
+
+      .active {
+        background-color: #eeeeee;
+      }
+
+
+  }
+
+  .aktiv {
+    background-color: #eeeeee;
+  }
+
+  .oversigt-box {
+    box-sizing: border-box;
+    height: 120vh;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+
+    .oversigt-slide {
+      border-bottom: 1px solid #707070;
+      height: 140px;
+      margin-top: 20px;
+      width: 98%;
+
+      .oversigt-slide-title {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+        font-size: 14px;
+      }
+
+        img {
+          height: 8px;
+          width: auto;
+        }
+      }
+
+      .checkbox-row {
+        display: flex;
         height: 10px;
-        width: 10px;
-      }
+        margin-top: 15px;
+        width: 100%;
 
-      p {
-        font-size: 12px;
-        margin-left: 10px;
-      }
+        .blue-border-box {
+          border-left: 1px solid #054BD0;
+          border-bottom: 1px solid #054BD0;
+          height: 10px;
+          width: 10px;
+        }
 
-      img {
-        height: 12px;
-        margin-left: 18px;
-        width: 5%;
-      }
+        p {
+          font-size: 12px;
+          margin-left: 10px;
+        }
 
-      .circle-box {
-        border: 1px solid #323232;
-        border-radius: 100%;
-        height: 8px;
-        margin-left: 18px;
-        margin-top: 2px;
-        width: 8px;
+        img {
+          height: 12px;
+          margin-left: 18px;
+          width: 5%;
+        }
+
+        .circle-box {
+          border: 1px solid #323232;
+          border-radius: 100%;
+          height: 8px;
+          margin-left: 18px;
+          margin-top: 2px;
+          width: 8px;
+        }
       }
     }
   }
 
+  .transkribering-box {
+    height: 80vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
 
-}
-
-.transkribering-box {
-  height: 80vh;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.qa-box {
-  height: 80vh;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
+  .qa-box {
+    height: 80vh;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
 </style>

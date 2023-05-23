@@ -53,23 +53,25 @@ const setActive = (newActive) => {
       <div class="mylibrary-box-item">
           <h2>Introduction</h2>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+
             </div>
       </div>
       <div class="mylibrary-box-item">
           <h2>Setup</h2>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+
             </div>
       </div>
       <div class="mylibrary-box-item">
@@ -87,14 +89,15 @@ const setActive = (newActive) => {
 
     <div class="mylibary-box" v-if="isActive !=='all'">
       <div class="mylibrary-box-item">
-          <h2>Alt muligt andet hehe</h2>
+          <h2>Introduction</h2>
             <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' fullWidth='true'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+
             </div>
       </div>
     </div>
