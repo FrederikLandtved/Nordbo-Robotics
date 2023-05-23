@@ -27,7 +27,7 @@ defineProps({
       </div>
       <div>
         <img src="@/assets/img/icons/Kalender.svg" alt="Man">
-        <h5>{{date}}</h5>
+        <h5>{{ date }}</h5>
       </div>
     </div>
   </div><!-- course-box-item -->
