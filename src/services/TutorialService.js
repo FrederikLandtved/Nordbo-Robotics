@@ -11,7 +11,6 @@ export const getTutorials = () => {
      });
 
      tutorialArray.sort((a, b) => a.id - b.id);
-     
      return tutorialArray;
  });
 }
