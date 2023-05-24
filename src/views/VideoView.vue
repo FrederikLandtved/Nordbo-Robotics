@@ -115,11 +115,62 @@
 </div><!-- Oversigt Box -->
 
 <div class="transkribering-box aktiv" v-if="isActive === 'transkribering'">
-  <h3>t</h3>
+  <p id="subtitles">
+    “Velkommen til denne video om hvordan du bruger din nye robot. Denne robot er designet til at hjælpe dig med forskellige opgaver i hjemmet, som at støvsuge, vaske op, lave mad og meget mere. 
+<br>
+For at komme i gang skal du først oplade din robot i mindst to timer ved at sætte den i stikkontakten. Når den er fuldt opladet, skal du trykke på tænd-knappen på toppen af robotten. Du vil høre en bip-lyd og se et grønt lys, der indikerer at robotten er klar til brug. 
+<br>
+For at styre din robot kan du bruge den medfølgende fjernbetjening eller downloade en app til din smartphone. Med fjernbetjeningen eller appen kan du vælge hvilken opgave du vil have robotten til at udføre, samt justere dens hastighed, lydstyrke og andre indstillinger. 
+<br>
+Du kan også tale direkte til robotten ved at sige dens navn, som du selv kan vælge i appen. For eksempel, hvis du har kaldt din robot R2-D2, kan du sige ‘R2-D2, støvsug stuen’ og robotten vil straks begynde at udføre opgaven. 
+<br>
+Hvis du vil have robotten til at stoppe, kan du sige ‘R2-D2, stop’ eller trykke på stop-knappen på fjernbetjeningen eller appen. Robotten vil automatisk vende tilbage til sin ladestation, når den er færdig med en opgave eller når dens batteri er lavt. 
+<br>
+For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer, filtre og børster med en blød klud. Du skal også undgå at udsætte robotten for vand, ild eller andre farlige stoffer.
+  </p>
 </div><!-- Transkribering Box -->
 
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
-  <h3>q</h3>
+  <div class="qa-menu">
+    <h4>How do I use Mimic for polishing?</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>What is Mimics best feature?</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How to prepare for your next project</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How to redo the calibration</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How do I use Mimic for sanding</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How do I attach sanding disc to Mimic?</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How do I detach disc from Mimic</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+
+  <div class="qa-menu">
+    <h4>How do I use Mimic for polishing?</h4>
+    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
+  </div><!-- Q/A menu -->
+  
 </div><!-- Q/A Box -->
 
 </template>
@@ -246,16 +297,42 @@
   }
 
   .transkribering-box {
-    height: 80vh;
+    box-sizing: border-box;
+    height: 100vh;
     left: 0;
-    position: absolute;
+    padding: 15px;
     width: 100%;
+
+    p {
+      font-weight: lighter;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   .qa-box {
-    height: 80vh;
+    box-sizing: border-box;
+    height: 70vh;
     left: 0;
-    position: absolute;
+    padding: 15px;
     width: 100%;
+
+    .qa-menu {
+      border-bottom: 1px solid #cccccc;
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        font-size: 14px;
+        margin-bottom: 25px;
+        margin-top: 15px;
+      }
+
+      img {
+        height: 10px;
+        margin-top: 18px;
+        transform: rotate(270deg);
+      }
+    }
   }
 </style>
