@@ -12,7 +12,7 @@
 <template>
 
 <div class="video-box" id="#">
-  <img src="../assets/img/icons/back.svg" alt="">
+  <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
 <h1>Video placeres her</h1>
 </div><!-- Video Box -->
 
