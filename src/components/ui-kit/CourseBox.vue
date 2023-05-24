@@ -18,16 +18,20 @@ defineProps({
           <img src="@/assets/img/icons/Right.svg" alt="Checkmark">
       </div>
     </div>
-    <p>{{ title }}</p>
-    <h4 class="desc">{{ description }}</h4>
-    <div class="course-box-item__author-calendar-box">
-      <div>
-        <img src="@/assets/img/icons/profile.svg" alt="Man">
-        <h5>{{ author }}</h5>
+    <div class="bottom-container">
+      <div class="text">
+        <p>{{ title }}</p>
+        <h4 class="desc">{{ description }}</h4>
       </div>
-      <div>
-        <img src="@/assets/img/icons/Kalender.svg" alt="Man">
-        <h5>{{ date }}</h5>
+      <div class="course-box-item__author-calendar-box">
+        <div>
+          <img src="@/assets/img/icons/profile.svg" alt="Man">
+          <h5>{{ author }}</h5>
+        </div>
+        <div>
+          <img src="@/assets/img/icons/Kalender.svg" alt="Man">
+          <h5>{{ date }}</h5>
+        </div>
       </div>
     </div>
   </div><!-- course-box-item -->
@@ -43,8 +47,6 @@ defineProps({
     min-width: 216px;
     box-shadow: 0 8px 5px -4px lightgrey;
 
-  
-    
     &__image{
       background-size: cover;
       background-position-y: -30px;
@@ -57,12 +59,11 @@ defineProps({
     &__author-calendar-box {
     border-top: 1px solid #f4f4f4;
     display: flex;
-    flex-direction: row;
+    flex-direction: columns;
     align-items: center;
     justify-content: space-between;
     height: 20px;
     margin: 0 auto;
-    margin-top: 26px;
     width: 90%;
 
     div {
@@ -96,6 +97,7 @@ defineProps({
       background-color: #FFFFFF;
       border-radius: 12px;
       display: flex;
+      align-items: center;
       height: 20px;
       margin-left: 100px;
       position: absolute;
@@ -105,13 +107,13 @@ defineProps({
 
       h4 {
         font-size: 11px;
-       
+        margin-left: 8px;
       }
 
       img {
-        height: 12px;
+        height: 10px;
         padding: 0;
-        padding-top: 5px;
+        padding-top: 1px;
         width: 100%;
       }
     }
@@ -119,19 +121,27 @@ defineProps({
 
   p {
     color: $buttonColor;
-    margin-top: 6px;
-    margin-left: 10px;
     font-size: 12px;
   }
 
   h4 {
-    margin-top: 5px;
-    margin-left: 10px;
     font-size: 14px;
     font-weight: 400;
   }
 .desc{
-  word-wrap: break-word;
+  white-space: initial;
 }
 
+.text {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.bottom-container {
+    height: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
 </style>

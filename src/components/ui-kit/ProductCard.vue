@@ -9,7 +9,7 @@
 <template>
   <div class="product-card-container">
     <div class="product-card-container__item--padding">
-      <h2>{{ title }}</h2>
+      <h2>{{ title }} </h2>
       <p>{{ paragraph }}</p>
       </div>
     <div class="product-card-container__item--image" :style="'background-image: url(' + image + ')'">
