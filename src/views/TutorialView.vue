@@ -1,17 +1,27 @@
 <script setup>
   import router from '@/router'
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   import { logOut } from '@/services/AuthService.js';
   import CourseBox from '../components/ui-kit/CourseBox.vue';
+  import { getVideos } from '@/services/VideoService.js';
 
-const isActive = ref("all");
+  const isActive = ref("all");
+  const videos = ref([]);
 
-const setActive = (newActive) => {
-  isActive.value = newActive;
-}
-const goToRoute = (route) => {
+  const setActive = (newActive) => {
+    isActive.value = newActive;
+  }
+
+  const goToRoute = (route) => {
     router.push({ path: route });
   }
+
+  onMounted(() => {
+    // Get tutorials from Firebase and add it to this components tutorials reference.
+    videos.value = getVideos().then((tutorialArray) => { 
+      videos.value = tutorialArray[0].tutorials;
+    });
+  })
 </script>
 
 <template>
@@ -53,16 +63,22 @@ const goToRoute = (route) => {
     </div>
 
     <div class="mylibary-box" v-if="isActive ==='all'">
-      <div class="mylibrary-box-item">
-          <h2>Introduction</h2>
+      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+          <h2>{{ tutorial.name }}</h2>
             <div class="course-box-list">
-              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 1/3' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 2/3' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 3/3' date='27-04-2023'></CourseBox>
-             
+              <CourseBox 
+                v-for="video in tutorial.videos" 
+                :author='video.author' 
+                :title='tutorial.name' 
+                :description='video.description' 
+                date='27-04-2023' 
+                @click="goToRoute('/video/' + video.id)"
+                :key='video.id'
+              >
+              </CourseBox>
             </div>
       </div>
-      <div class="mylibrary-box-item">
+      <!-- <div class="mylibrary-box-item">
           <h2>Setup</h2>
             <div class="course-box-list">
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
@@ -84,7 +100,7 @@ const goToRoute = (route) => {
               <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
             </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="mylibary-box" v-if="isActive !=='all'">

@@ -6,14 +6,15 @@ defineProps({
     description: String,
     author: String,
     date: Date,
-    fullWidth: Boolean
+    fullWidth: Boolean,
+    isCompleted: Boolean
 }) 
 </script>
 <template>
 
 <div class="course-box-item" :class="{fullwidth: fullWidth}">
     <div class="course-box-item__image" style="background-image: url(./src/assets/img/billede.png);">
-        <div class="check-box">
+        <div class="check-box" v-if="isCompleted === true">
           <h4>Gennemført</h4>
           <img src="@/assets/img/icons/Right.svg" alt="Checkmark">
       </div>

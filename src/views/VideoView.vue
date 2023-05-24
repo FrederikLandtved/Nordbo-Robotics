@@ -1,25 +1,36 @@
 <script setup>
   import router from '@/router'
-  import { ref } from 'vue'
+  import { ref, onBeforeMount } from 'vue'
+  import { useRoute } from 'vue-router';
+  import { getVideo } from '@/services/VideoService.js';
 
   const isActive = ref("oversigt");
+  const route = useRoute();
+  const videoToShow = ref({});
 
   const setActive = (newActive) => {
-  isActive.value = newActive;
-}
+    isActive.value = newActive;
+  }
+
+  onBeforeMount(() => {
+    const id = route.params.id;
+    getVideo(id).then(video => {
+      videoToShow.value = video;
+    });
+  })
 </script>
 
 <template>
 
 <div class="video-box" id="#">
   <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
-  <video controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/nordbo-robotics-85ff2.appspot.com/o/Mimic%20with%20IR%20Tracker_%20Demonstration%20%7C%20Nordbo%20Robotics.mp4?alt=media&token=bef92abd-4209-4fba-ad4a-e8308f7d733f">
-</video>
+  <video controls autoplay :key='videoToShow.videolink'>
+    <source :src='videoToShow.videolink' type="video/mp4">
+  </video>
 </div><!-- Video Box -->
 
 <div class="video-info">
-  <h2>Introduction to learn and use Mimic</h2>
+  <h2>{{ videoToShow.description }}</h2>
   <img src="../assets/img/icons/downloade.svg" alt="Download">
 </div>
 
@@ -209,7 +220,6 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 
     img {
       height: 10px;
-      margin-left: 75px;
       margin-top: 18px;
       width: 10%;
     }
