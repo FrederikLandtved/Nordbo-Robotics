@@ -1,5 +1,5 @@
 <script setup>
-
+  import router from '@/router'
   import { ref } from 'vue'
   import { logOut } from '@/services/AuthService.js';
   import CourseBox from '../components/ui-kit/CourseBox.vue';
@@ -9,6 +9,9 @@ const isActive = ref("all");
 const setActive = (newActive) => {
   isActive.value = newActive;
 }
+const goToRoute = (route) => {
+    router.push({ path: route });
+  }
 </script>
 
 <template>
@@ -53,19 +56,7 @@ const setActive = (newActive) => {
       <div class="mylibrary-box-item">
           <h2>Introduction</h2>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-
-            </div>
-      </div>
-      <div class="mylibrary-box-item">
-          <h2>Setup</h2>
-            <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
@@ -77,7 +68,19 @@ const setActive = (newActive) => {
       <div class="mylibrary-box-item">
           <h2>Setup</h2>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+
+            </div>
+      </div>
+      <div class="mylibrary-box-item">
+          <h2>Setup</h2>
+            <div class="course-box-list">
+              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
@@ -91,7 +94,7 @@ const setActive = (newActive) => {
       <div class="mylibrary-box-item">
           <h2>Introduction</h2>
             <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
