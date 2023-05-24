@@ -56,13 +56,10 @@ const goToRoute = (route) => {
       <div class="mylibrary-box-item">
           <h2>Introduction</h2>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-
+              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 1/3' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
+              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 2/3' date='27-04-2023'></CourseBox>
+              <CourseBox author='Jens Jensen' title='Introduction' description='Introduction to learn and use Mimic 3/3' date='27-04-2023'></CourseBox>
+             
             </div>
       </div>
       <div class="mylibrary-box-item">

@@ -33,7 +33,7 @@
 <template>
   <div class="mylearning">
 
-    <img src="../assets/img/icons/back.svg" alt="">
+    <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
     
     <div class="profile">
       <div class="profile-info">       

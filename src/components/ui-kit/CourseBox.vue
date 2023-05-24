@@ -19,7 +19,7 @@ defineProps({
       </div>
     </div>
     <p>{{ title }}</p>
-    <h4>{{ description }}</h4>
+    <h4 class="desc">{{ description }}</h4>
     <div class="course-box-item__author-calendar-box">
       <div>
         <img src="@/assets/img/icons/profile.svg" alt="Man">
@@ -105,6 +105,7 @@ defineProps({
 
       h4 {
         font-size: 11px;
+       
       }
 
       img {
@@ -129,6 +130,8 @@ defineProps({
     font-size: 14px;
     font-weight: 400;
   }
-
+.desc{
+  word-wrap: break-word;
+}
 
 </style>

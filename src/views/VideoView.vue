@@ -13,7 +13,9 @@
 
 <div class="video-box" id="#">
   <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
-<h1>Video placeres her</h1>
+  <video controls>
+  <source src="https://firebasestorage.googleapis.com/v0/b/nordbo-robotics-85ff2.appspot.com/o/Mimic%20with%20IR%20Tracker_%20Demonstration%20%7C%20Nordbo%20Robotics.mp4?alt=media&token=bef92abd-4209-4fba-ad4a-e8308f7d733f">
+</video>
 </div><!-- Video Box -->
 
 <div class="video-info">
@@ -178,13 +180,19 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 <style lang="scss" scoped>
   @import "@/assets/main.scss";
   .video-box {
-    background-color: $iconGreen;
     height: 212px;
     width: 100%;
 
     img {
       padding-top: 15px;
       padding-left: 15px;
+      position:absolute;
+      z-index: 10000;
+    }
+    video {
+      width: 100%;
+      height: 212px;
+      object-fit: fill;
     }
   }
 
