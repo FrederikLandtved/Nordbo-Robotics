@@ -83,10 +83,9 @@
     <div class="mylibary-box" v-if="isActive =='introduction'">
       <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
         <h2 v-if="tutorial.name === 'Introduction'">{{ tutorial.name }}</h2>
-            <div class="course-box-list vertical">
+            <div class="course-box-list vertical" v-if="tutorial.name === 'Introduction'" >
               <CourseBox 
                 v-for="video in tutorial.videos"
-                v-if="tutorial.name === 'Introduction'" 
                 :author='video.author' 
                 :title='tutorial.name' 
                 :description='video.description' 
@@ -105,7 +104,6 @@
             <div class="course-box-list vertical" v-if="tutorial.name === 'Setup'">
               <CourseBox 
                 v-for="video in tutorial.videos"
-                v-if="tutorial.name === 'Setup'" 
                 :author='video.author' 
                 :title='tutorial.name' 
                 :description='video.description' 
