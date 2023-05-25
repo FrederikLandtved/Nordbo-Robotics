@@ -4,7 +4,7 @@
 <template>
   <div class="mylearning">
 
-    <img src="../assets/img/icons/back.svg" alt="">
+    <img src="/assets/img/icons/back.svg" alt="">
     
     <div class="profile" style="padding:8px 0;">
     

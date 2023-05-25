@@ -17,7 +17,7 @@
 <template>  
   <div class="background">
     <div class="flex-item">
-      <img src="../assets/img/nordbo-icon.png">
+      <img src="/assets/img/nordbo-icon.png">
     </div>    
     <div class="flex-item items-start">
       <div class="login-btn">
@@ -48,7 +48,7 @@
 @import "@/assets/main.scss";
 
 .background{
-    background-image:url("../assets/img/login-background.png");
+    background-image:url("/assets/img/login-background.png");
     background-size: auto;
     background-position: 15% 65%;
     height: 100vh;

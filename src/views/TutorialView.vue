@@ -36,7 +36,7 @@
             sand with Mimic
             </p>
         <button class="WatchAll">
-            Watch all <img src="../assets/img/icons/PlayAll.svg">
+            Watch all <img src="/assets/img/icons/PlayAll.svg">
         </button>
     </div>
 
@@ -125,7 +125,7 @@
 
 
 .top{
-    background-image: url(../assets/img/sandning-tuto.png);
+    background-image: url(/assets/img/sandning-tuto.png);
     width: 100%;
     height: 210px;
 

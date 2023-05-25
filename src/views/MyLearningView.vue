@@ -38,24 +38,24 @@
 <template>
   <div class="mylearning">
 
-    <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
+    <img src="/assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
     
     <div class="profile">
       <div class="profile-info">       
-        <img src="../assets/img/user-placeholder.jpg" class="profilPic" alt="Profile Picture">
+        <img src="/assets/img/user-placeholder.jpg" class="profilPic" alt="Profile Picture">
         
         <div class="profile-info-header">
           <h1>{{ displayName }}</h1>
-          <img src="../assets/img/icons/edit.svg" @click="logOutUser()" alt="Edit">
+          <img src="/assets/img/icons/edit.svg" @click="logOutUser()" alt="Edit">
         </div>
 
         <div class="profile-info-item">
-          <img src="../assets/img/icons/factory.svg" alt="Factory">
+          <img src="/assets/img/icons/factory.svg" alt="Factory">
           <h2>REA Automatdrejning</h2>
         </div>
 
         <div class="profile-info-item">
-          <img src="../assets/img/icons/Right.svg" alt="Checkmark">
+          <img src="/assets/img/icons/Right.svg" alt="Checkmark">
           <h3>3 task/s completed</h3>
         </div>
 
@@ -86,10 +86,6 @@
                 >
               </CourseBox>
             </div>
-            <!-- <h4>Ongoing Corses</h4>
-            <div class="course-box-list">
-         
-            </div> -->
       </div>
     
     </div>

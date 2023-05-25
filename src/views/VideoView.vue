@@ -28,7 +28,7 @@
 <template>
 
 <div class="video-box" id="#">
-  <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
+  <img src="/assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
   <video controls autoplay :key='videoToShow.videolink' ref="videoElement" @ended="onEndedVideo()">
     <source :src='videoToShow.videolink' type="video/mp4">
   </video>
@@ -36,7 +36,7 @@
 
 <div class="video-info">
   <h2>{{ videoToShow.description }}</h2>
-  <img src="../assets/img/icons/downloade.svg" alt="Download">
+  <img src="/assets/img/icons/downloade.svg" alt="Download">
 </div>
 
 <div class="video-buttons">
@@ -56,32 +56,32 @@
   <div class="oversigt-slide">
     <div class="oversigt-slide-title">
       <h3>Introduction to learn and use Mimic</h3>
-    <img src="../assets/img/icons/arrow-down.png" alt="">
+    <img src="/assets/img/icons/arrow-down.png" alt="">
     </div>
 
   <div class="checkbox-row">
     <div class="blue-border-box"></div>
     <p>Introduction to unpacking - 1/3</p>
-    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+    <img src="/assets/img/icons/Right.svg" alt="Check Mark">
   </div><!-- Checkbox Row -->
 
   <div class="checkbox-row">
     <div class="blue-border-box"></div>
     <p>Introduction to unpacking - 2/3</p>
-    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+    <img src="/assets/img/icons/Right.svg" alt="Check Mark">
   </div><!-- Checkbox Row -->
 
   <div class="checkbox-row">
     <div class="blue-border-box"></div>
     <p>Introduction to unpacking - 3/3</p>
-    <img src="../assets/img/icons/Right.svg" alt="Check Mark">
+    <img src="/assets/img/icons/Right.svg" alt="Check Mark">
   </div><!-- Checkbox Row -->
   </div><!-- oversigt-slide -->
 
   <div class="oversigt-slide">
     <div class="oversigt-slide-title">
       <h3>Set up Mimic software to your robot</h3>
-    <img src="../assets/img/icons/arrow-down.png" alt="">
+    <img src="/assets/img/icons/arrow-down.png" alt="">
     </div>
 
   <div class="checkbox-row">
@@ -106,7 +106,7 @@
   <div class="oversigt-slide">
     <div class="oversigt-slide-title">
       <h3>How to calibrate Mimic to your robot</h3>
-    <img src="../assets/img/icons/arrow-down.png" alt="">
+    <img src="/assets/img/icons/arrow-down.png" alt="">
     </div>
 
   <div class="checkbox-row">
