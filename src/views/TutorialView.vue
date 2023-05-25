@@ -63,7 +63,7 @@
     </div>
 
     <div class="mylibary-box" v-if="isActive ==='all'">
-      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+      <div class="mylibrary-box-item m-bottom" v-for="tutorial in videos" :key="tutorial.key">
           <h2>{{ tutorial.name }}</h2>
             <div class="course-box-list">
               <CourseBox 
@@ -212,6 +212,7 @@
     background-color: #f1f1f1;
     height: calc(100vh - 350px);
     overflow-y: scroll;
+    padding: 20px 10px;
 
     .complete-box {
       height: 30vh;
@@ -226,7 +227,6 @@
 
     .mylibrary-box-item {
       overflow: hidden;
-      padding: 20px 10px;
 
       .course-box-list {
         display: flex;
@@ -242,6 +242,10 @@
           height: unset;
           padding-right: 0;
         }
+      }
+
+      &.m-bottom {
+        margin-bottom: 20px;
       }
     }
   }

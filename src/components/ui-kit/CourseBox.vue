@@ -47,6 +47,7 @@ defineProps({
     margin-right: 12px;
     min-width: 216px;
     box-shadow: 0 8px 5px -4px lightgrey;
+    margin-bottom: 20px;
 
     &__image{
       background-size: cover;

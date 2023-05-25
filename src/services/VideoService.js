@@ -8,7 +8,6 @@ export const registerVideoView = async(id) => {
   const usersVideos = await getUsersVideoViews();
 
   if (usersVideos.some(video => video.videoId == id && video.email == email)) {
-      console.log('User has already watched the video.');
     return;
   }
   
