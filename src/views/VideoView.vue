@@ -1,8 +1,8 @@
 <script setup>
   import router from '@/router'
-  import { ref, onBeforeMount } from 'vue'
+  import { ref, onMounted } from 'vue'
   import { useRoute } from 'vue-router';
-  import { getVideo } from '@/services/VideoService.js';
+  import { getVideo, registerVideoView } from '@/services/VideoService.js';
 
   const isActive = ref("oversigt");
   const route = useRoute();
@@ -12,19 +12,24 @@
     isActive.value = newActive;
   }
 
-  onBeforeMount(() => {
+  onMounted(() => {
     const id = route.params.id;
+
     getVideo(id).then(video => {
       videoToShow.value = video;
     });
   })
+
+  function onEndedVideo() {
+    registerVideoView(route.params.id);
+  }
 </script>
 
 <template>
 
 <div class="video-box" id="#">
   <img src="../assets/img/icons/back.svg" alt="" @click="$router.go(-1)">
-  <video controls autoplay :key='videoToShow.videolink'>
+  <video controls autoplay :key='videoToShow.videolink' ref="videoElement" @ended="onEndedVideo()">
     <source :src='videoToShow.videolink' type="video/mp4">
   </video>
 </div><!-- Video Box -->

@@ -1,6 +1,17 @@
 import { authentication } from "../../firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { goToRoute } from "./NavigationService";
+import { getAuth } from "firebase/auth";
+
+export const getUserEmail = () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (user !== null) {
+    const email = user.email;
+
+    return email;
+  }
+}
 
 export const createUser = (email, password, name) => {
   const authInstance = authentication;
