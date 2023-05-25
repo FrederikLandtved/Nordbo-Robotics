@@ -81,6 +81,8 @@
                 :key="completedCourse.videoId"
                 :title="completedCourse.title"
                 :description='completedCourse.description'
+                :author='completedCourse.author'
+                date="25-05-2023"
                 >
               </CourseBox>
             </div>

@@ -49,6 +49,12 @@ defineProps({
     box-shadow: 0 8px 5px -4px lightgrey;
     margin-bottom: 20px;
 
+    &.fullwidth {
+      width: 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+    
     &__image{
       background-size: cover;
       background-position-y: -30px;
@@ -90,11 +96,7 @@ defineProps({
       font-weight: 400;
     }
   }
-    &.fullwidth {
-      width: 100%;
-      margin-bottom: 30px;
-      margin-right: 0;
-    }
+
     .check-box {
       background-color: #FFFFFF;
       border-radius: 12px;
@@ -137,6 +139,7 @@ defineProps({
 .text {
   padding: 0 10px;
   box-sizing: border-box;
+  max-width: 216px;
 }
 
 .bottom-container {
