@@ -18,8 +18,6 @@
       displayName.value = user.displayName;
       getUsersVideos().then((usersVideos) => {
         videos.value = usersVideos;
-
-        console.log(videos.value);
       });
     }
   });
