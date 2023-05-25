@@ -44,7 +44,7 @@
       <ProductCard 
         title='Mimic' 
         paragraph='Mimic, the ease-to-use tool that allows anyone to record and automate tasks without any prior programming experience.' 
-        image='../src/assets/img/mimic1.png'  
+        image='/assets/img/mimic1.png'  
       />
       <h4 class="headline">Here is how you can use Mimic</h4>
       <div class="grid-container" v-if="tutorials.length > 0">
