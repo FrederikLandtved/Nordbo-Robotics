@@ -16,9 +16,9 @@ const router = createRouter({
       path: '/mylearning',
       name: 'mylearning',
       component: () => import('../views/MyLearningView.vue'),
-      meta: {
-        requiresAuth: true
-      }
+      // meta: {
+      //   requiresAuth: true
+      // }
     },
     {
       path: '/notifications',

@@ -1,14 +1,14 @@
 import { database } from "../../firebase";
-import { collection, getDocs, addDoc, doc } from 'firebase/firestore';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
 import { getUserEmail } from './AuthService';
 
 export const registerVideoView = async(id) => {
   const email = getUserEmail();
   const collectionRef = collection(database, 'user-video-views');
-  const usersVideos = await getUsersVideos();
+  const usersVideos = await getUsersVideoViews();
 
   if (usersVideos.some(video => video.videoId == id && video.email == email)) {
-    console.log('User has already watched the video.');
+      console.log('User has already watched the video.');
     return;
   }
   
@@ -60,7 +60,7 @@ export const getVideo = (id) => {
  });
 }
 
-export const getUsersVideos = () => {
+export const getUsersVideoViews = () => {
   const collectionRef = collection(database, 'user-video-views');
   const email = getUserEmail();
 
@@ -76,3 +76,17 @@ export const getUsersVideos = () => {
      return videos;
  });
 }
+
+export const getUsersVideos = async () => {
+  const usersVideoViews = await getUsersVideoViews();
+  const videoPromises = [];
+
+  usersVideoViews.forEach((item) => {
+    const videoPromise = getVideo(item.videoId);
+    videoPromises.push(videoPromise);
+  });
+
+  const videos = await Promise.all(videoPromises);
+
+  return videos;
+};

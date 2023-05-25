@@ -1,19 +1,26 @@
 <script setup>
   import router from '@/router'
   import CourseBox from '../components/ui-kit/CourseBox.vue';
-  import { ref } from 'vue'
+  import { ref, onMounted, onBeforeMount } from 'vue'
   import { logOut } from '@/services/AuthService.js';
   import { onAuthStateChanged } from "firebase/auth";
   import { authentication } from '../../firebase'
+  import { getUsersVideos } from '@/services/VideoService.js'
 
   const auth = authentication;
   const displayName = ref('Loading..');
   const isActive = ref("mylibary");
+  const videos = ref([]);
 
   onAuthStateChanged(auth, (user) => {
     if (user !== null) {
       // User is signed in
       displayName.value = user.displayName;
+      getUsersVideos().then((usersVideos) => {
+        videos.value = usersVideos;
+
+        console.log(videos.value);
+      });
     }
   });
 
@@ -68,14 +75,21 @@
       <div class="mylibary-box" v-if="isActive ==='mylibary'">
       <div class="mylibrary-box-item">
           <h2>My Learning</h2>
-          <h4>Completed Corses</h4>
+          <h4>Completed Courses</h4>
             <div class="course-box-list">
-            
+              <CourseBox 
+                isCompleted 
+                v-for="completedCourse in videos" 
+                :key="completedCourse.videoId"
+                :title="completedCourse.title"
+                :description='completedCourse.description'
+                >
+              </CourseBox>
             </div>
-            <h4>Ongoing Corses</h4>
+            <!-- <h4>Ongoing Corses</h4>
             <div class="course-box-list">
          
-            </div>
+            </div> -->
       </div>
     
     </div>
