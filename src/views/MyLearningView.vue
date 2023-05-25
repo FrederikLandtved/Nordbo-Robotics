@@ -70,28 +70,25 @@
           <h2>My Learning</h2>
           <h4>Completed Corses</h4>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+            
             </div>
             <h4>Ongoing Corses</h4>
             <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
+         
             </div>
       </div>
     
     </div>
 
     <div class="download-box" v-if="isActive === 'download'">
-    <h2>My Learning</h2>
+      <div class="download-box-item">
+        <h2>My Learning</h2>
+        <h4>Sanding downloads</h4>
+            <div class="course-box-list">
+            
+            </div>
+            
+      </div>
     </div>
 
     </div>
@@ -218,7 +215,10 @@ $background-noti-aktiv:#eeeeee;
         margin-top:30px;
       }
 
-      .course-box-list {
+  
+    }
+  }
+  .course-box-list {
         display: flex;
         flex-direction: row;
         margin-top: 5px;
@@ -233,17 +233,25 @@ $background-noti-aktiv:#eeeeee;
           padding-right: 0;
         }
       }
-    }
-  }
-
   .download-box {
-    background-color: #eeeeee;
-    height: 80vh;
-    left: 0;
-    position: absolute;
-    width: 100%;
+    background-color: #f1f1f1;
+    height: calc(100vh - 350px);
+    overflow-y: scroll;
 
-   
+
+    h3 {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    .download-box-item {
+      overflow: hidden;
+      padding: 20px 10px;
+
+      h4{
+        margin-top:30px;
+      }
   }
 
 }

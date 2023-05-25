@@ -78,70 +78,11 @@
               </CourseBox>
             </div>
       </div>
-      <!-- <div class="mylibrary-box-item">
-          <h2>Setup</h2>
-            <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-
-            </div>
-      </div>
-      <div class="mylibrary-box-item">
-          <h2>Setup</h2>
-            <div class="course-box-list">
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Godmorgen Danmark' description='Jacob er en gud hahahahaha' date='27-04-2023'></CourseBox>
-            </div>
-      </div> -->
     </div>
 
     <div class="mylibary-box" v-if="isActive =='introduction'">
       <div class="mylibrary-box-item">
           <h2>Introduction</h2>
-            <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Introduction' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Introduction' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-
-            </div>
-      </div>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive =='setup'">
-      <div class="mylibrary-box-item">
-          <h2>Setup</h2>
-            <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Setup' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Setup' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-            </div>
-      </div>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive =='calibration'">
-      <div class="mylibrary-box-item">
-          <h2>Calibration</h2>
-            <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-
-            </div>
-      </div>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive =='mimic'">
-      <div class="mylibrary-box-item">
-          <h2>Mimic</h2>
             <div class="course-box-list vertical">
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
               <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
