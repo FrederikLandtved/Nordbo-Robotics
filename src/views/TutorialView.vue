@@ -81,16 +81,39 @@
     </div>
 
     <div class="mylibary-box" v-if="isActive =='introduction'">
-      <div class="mylibrary-box-item">
-          <h2>Introduction</h2>
+      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+          
             <div class="course-box-list vertical">
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023' @click="goToRoute('/video')"></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
-              <CourseBox author='Jacob Dolleris' title='Lorem ipsum' description='Lorem ipsum dolor sit amet' date='27-04-2023'></CourseBox>
+              <CourseBox 
+                v-for="video in tutorial.videos"
+                v-if="tutorial.name === 'Introduction'" 
+                :author='video.author' 
+                :title='tutorial.name' 
+                :description='video.description' 
+                date='27-04-2023' 
+                @click="goToRoute('/video/' + video.id)"
+                :key='video.id'
+              >
+              </CourseBox>
+            </div>
+      </div>
+    </div>
 
+    <div class="mylibary-box" v-if="isActive =='setup'">
+      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+          
+            <div class="course-box-list vertical">
+              <CourseBox 
+                v-for="video in tutorial.videos"
+                v-if="tutorial.name === 'Setup'" 
+                :author='video.author' 
+                :title='tutorial.name' 
+                :description='video.description' 
+                date='27-04-2023' 
+                @click="goToRoute('/video/' + video.id)"
+                :key='video.id'
+              >
+              </CourseBox>
             </div>
       </div>
     </div>
