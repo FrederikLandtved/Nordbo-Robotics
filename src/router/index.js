@@ -8,17 +8,17 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
-      // meta: {
-      //   requiresAuth: true
-      // }
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/mylearning',
       name: 'mylearning',
       component: () => import('../views/MyLearningView.vue'),
-      // meta: {
-      //   requiresAuth: true
-      // }
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/notifications',
@@ -31,12 +31,18 @@ const router = createRouter({
     {
       path: '/tutorial',
       name: 'tutorial',
-      component: () => import('../views/TutorialView.vue')
+      component: () => import('../views/TutorialView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/video/:id',
       name: 'video',
-      component: () => import('../views/VideoView.vue')
+      component: () => import('../views/VideoView.vue'),
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/auth',
