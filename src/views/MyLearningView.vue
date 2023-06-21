@@ -6,7 +6,7 @@
   import { onAuthStateChanged } from "firebase/auth";
   import { authentication } from '../../firebase'
   import { getUsersVideos } from '@/services/VideoService.js'
-
+  import TabBox from '../components/ui-kit/tab/TabBox.vue';
   const auth = authentication;
   const displayName = ref('Loading..');
   const isActive = ref("mylibary");
@@ -23,7 +23,7 @@
   });
 
   const logOutUser = () => {
-  logOut();
+    logOut();
   }
 
   const setActive = (newActive) => {
@@ -60,46 +60,34 @@
         </div>
 
       </div>
+    <TabBox :tabs="[{title: 'My Library', id:'mylibrary'}, {title: 'Download', id:'download'}]">
+        <template #mylibrary>
+          <div class="mylibrary-box-item">
+              <h2>My Learning</h2>
+              <h4>Completed Courses</h4>
+                <div class="course-box-list">
+                  <CourseBox 
+                    isCompleted 
+                    v-for="completedCourse in videos" 
+                    :key="completedCourse.videoId"
+                    :title="completedCourse.title"
+                    :description='completedCourse.description'
+                    :author='completedCourse.author'
+                    date="25-05-2023"
+                  >
+                  </CourseBox>
+                </div>
+          </div>
+        </template>
 
-      <div class="profile-buttons">
-        <button @click="setActive('mylibary')" class="profile-tab-button" :class="{ active: isActive === 'mylibary' }">
-          My library
-        </button>
-        
-        <button @click="setActive('download')" class="profile-tab-button" :class="{active: isActive  === 'download' }">
-          Download
-        </button>
-      </div>
-      <div class="mylibary-box" v-if="isActive ==='mylibary'">
-      <div class="mylibrary-box-item">
+        <template #download>
           <h2>My Learning</h2>
-          <h4>Completed Courses</h4>
-            <div class="course-box-list">
-              <CourseBox 
-                isCompleted 
-                v-for="completedCourse in videos" 
-                :key="completedCourse.videoId"
-                :title="completedCourse.title"
-                :description='completedCourse.description'
-                :author='completedCourse.author'
-                date="25-05-2023"
-                >
-              </CourseBox>
-            </div>
-      </div>
-    
-    </div>
-
-    <div class="download-box" v-if="isActive === 'download'">
-      <div class="download-box-item">
-        <h2>My Learning</h2>
-        <h4>Sanding downloads</h4>
-            <div class="course-box-list">
-            
-            </div>
-            
-      </div>
-    </div>
+          <h4>Sanding downloads</h4>
+          <div class="course-box-list">
+          
+          </div>
+        </template>
+    </TabBox>
 
     </div>
     </div>
