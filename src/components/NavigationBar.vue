@@ -8,7 +8,7 @@
 
 <template>
   <nav class="navigation--bar">
-    <div class="navigation--bar__item" @click="goToRoute('/')">
+    <div class="navigation--bar__item" @click="goToRoute('/home')">
       <img src="/assets/img/icons/home2.svg" alt="home"> <p>Home</p>
     </div>
     <div class="navigation--bar__item" @click="goToRoute('/mylearning')">

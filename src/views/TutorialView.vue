@@ -35,7 +35,7 @@
             Watch the videos and learn how to 
             sand with Mimic
             </p>
-        <button class="WatchAll">
+        <button class="WatchAll" @click="goToRoute('/video/' + 1)">
             Watch all <img src="/assets/img/icons/PlayAll.svg">
         </button>
     </div>

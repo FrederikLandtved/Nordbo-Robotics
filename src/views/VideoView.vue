@@ -21,7 +21,21 @@
   })
 
   function onEndedVideo() {
+    let currentVideo = route.params.id;
+    currentVideo = eval(currentVideo) + 1;
+
+    console.log(currentVideo);
+
     registerVideoView(route.params.id);
+    goToRoute('/video/' + currentVideo);
+
+    getVideo(currentVideo).then(video => {
+      videoToShow.value = video;
+    });
+  }
+
+  const goToRoute = (route) => {
+    router.push({ path: route });
   }
 </script>
 
