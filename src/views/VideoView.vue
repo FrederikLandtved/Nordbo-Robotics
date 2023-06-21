@@ -3,10 +3,12 @@
   import { ref, onMounted } from 'vue'
   import { useRoute } from 'vue-router';
   import { getVideo, registerVideoView } from '@/services/VideoService.js';
+  import QaBox from '../components/ui-kit/QaBox.vue';
 
   const isActive = ref("oversigt");
   const route = useRoute();
   const videoToShow = ref({});
+  
 
   const setActive = (newActive) => {
     isActive.value = newActive;
@@ -23,6 +25,11 @@
   function onEndedVideo() {
     registerVideoView(route.params.id);
   }
+
+ 
+
+
+
 </script>
 
 <template>
@@ -148,48 +155,32 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
   </p>
 </div><!-- Transkribering Box -->
 
+
+
+
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
-  <div class="qa-menu">
-    <h4>How do I use Mimic for polishing?</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>What is Mimics best feature?</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How to prepare for your next project</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How to redo the calibration</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How do I use Mimic for sanding</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How do I attach sanding disc to Mimic?</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How do I detach disc from Mimic</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
-
-  <div class="qa-menu">
-    <h4>How do I use Mimic for polishing?</h4>
-    <img src="@/assets/img/icons/arrow-down.png" alt="Arrow">
-  </div><!-- Q/A menu -->
   
-</div><!-- Q/A Box -->
+
+
+
+  <QaBox
+  title="How do i use Mimic for polishing?"
+  desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
+  ></QaBox>
+
+
+  <QaBox
+  title="What is Mimics best feature?"
+  desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
+  ></QaBox>
+  
+  
+  
+ 
+
+  
+</div>
+
 
 </template>
 
@@ -335,27 +326,11 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 
   .qa-box {
     box-sizing: border-box;
-    height: 70vh;
+    height: auto;
     left: 0;
     padding: 15px;
     width: 100%;
 
-    .qa-menu {
-      border-bottom: 1px solid #cccccc;
-      display: flex;
-      justify-content: space-between;
 
-      h4 {
-        font-size: 14px;
-        margin-bottom: 25px;
-        margin-top: 15px;
-      }
-
-      img {
-        height: 10px;
-        margin-top: 18px;
-        transform: rotate(270deg);
-      }
-    }
   }
 </style>
