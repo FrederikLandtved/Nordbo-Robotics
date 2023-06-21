@@ -164,7 +164,7 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 
 
   <QaBox
-  title="How do i use Mimic for polishing?"
+  title="How do I use Mimic for polishing?"
   desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
   ></QaBox>
 
@@ -172,6 +172,31 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
   <QaBox
   title="What is Mimics best feature?"
   desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
+  ></QaBox>
+
+  <QaBox
+  title="How to prepare for your next project"
+  desc=""
+  ></QaBox>
+
+  <QaBox
+  title="How to redo the calibration"
+  desc=""
+  ></QaBox>
+
+  <QaBox
+  title="How do i attach sanding disc to Mimic?"
+  desc=""
+  ></QaBox>
+
+  <QaBox
+  title="How do i use Mimic for sanding?"
+  desc=""
+  ></QaBox>
+
+  <QaBox
+  title="How to i detach disc from Mimic"
+  desc=""
   ></QaBox>
   
   

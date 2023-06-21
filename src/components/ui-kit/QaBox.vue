@@ -15,6 +15,9 @@ function toggleExpanded(){
     desc: String
   })
 
+
+
+
 </script>
 
 
@@ -62,16 +65,22 @@ justify-content: space-between;
     
 
       h4 {
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 25px;
         margin-top: 15px;
+        font-weight: 500;
       }
 
       img {
         height: 10px;
         transform: rotate(270deg);
-        
+     
       }
+      
+
+      }
+
+    
       .expanded{
         padding-bottom: 20px;
  
@@ -82,6 +91,10 @@ justify-content: space-between;
             }
         
       }
-    }
+
+
+
+
+
 </style>
 
