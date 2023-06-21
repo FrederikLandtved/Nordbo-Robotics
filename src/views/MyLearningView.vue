@@ -7,11 +7,12 @@
   import { authentication } from '../../firebase'
   import { getUsersVideos } from '@/services/VideoService.js'
   import TabBox from '../components/ui-kit/tab/TabBox.vue';
+
   const auth = authentication;
   const displayName = ref('Loading..');
-  const isActive = ref("mylibary");
   const videos = ref([]);
-
+  const pageTabs = ref([{title: 'My Library', id:'mylibrary'}, {title: 'Download', id:'download'}]);
+  
   onAuthStateChanged(auth, (user) => {
     if (user !== null) {
       // User is signed in
@@ -24,10 +25,6 @@
 
   const logOutUser = () => {
     logOut();
-  }
-
-  const setActive = (newActive) => {
-    isActive.value = newActive;
   }
 
   const goToRoute = (route) => {
@@ -59,12 +56,14 @@
           <h3>3 task/s completed</h3>
         </div>
 
-      </div>
-    <TabBox :tabs="[{title: 'My Library', id:'mylibrary'}, {title: 'Download', id:'download'}]">
-        <template #mylibrary>
-          <div class="mylibrary-box-item">
-              <h2>My Learning</h2>
-              <h4>Completed Courses</h4>
+    </div>
+    <TabBox :tabs="pageTabs">
+      <template #mylibrary>
+        <div class="mylibrary-box">
+            <div class="mylibrary-box-item">
+                <h2>My Learning</h2>
+                <h4>Completed Courses</h4>
+
                 <div class="course-box-list">
                   <CourseBox 
                     isCompleted 
@@ -77,16 +76,19 @@
                   >
                   </CourseBox>
                 </div>
-          </div>
-        </template>
+            </div>
+        </div>
+      </template>
 
-        <template #download>
+      <template #download>
+        <div class="mylibrary-box">
           <h2>My Learning</h2>
           <h4>Sanding downloads</h4>
           <div class="course-box-list">
           
           </div>
-        </template>
+        </div>
+      </template>
     </TabBox>
 
     </div>
@@ -169,53 +171,10 @@ $background-noti-aktiv:#eeeeee;
 
   }
 
-  .profile-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
-    .profile-tab-button {
-      background-color: #ffffff;
-      border: 0;
-      border-radius: 12px 12px 0 0;
-      font-weight: 500;
-      height: 40px;
-      width: 180px;
+  .mylibrary-box {
+    padding: 20px 10px;
   }
 
-    .active {
-      background-color: #eeeeee;
-    }
-  }
-
-  .mylibary-box {
-    background-color: #f1f1f1;
-    height: calc(100vh - 350px);
-    overflow-y: scroll;
-
-    .complete-box {
-      height: 30vh;
-      
-
-
-      h3 {
-        font-weight: 500;
-        font-size: 14px;
-      }
-    }
-
-    .mylibrary-box-item {
-      overflow: hidden;
-      padding: 20px 10px;
-
-      h4{
-        margin-top:30px;
-      }
-
-  
-    }
-  }
   .course-box-list {
         display: flex;
         flex-direction: row;

@@ -16,12 +16,12 @@
   })
 </script>
 <template>
-  <div class="profile-buttons">
+  <div class="tab-buttons">
     <button 
       v-for="item in tabs" 
       :key="item.title" 
       @click="setActiveTab(item.id)" 
-      class="profile-tab-button" 
+      class="tab-button" 
       :class="{ active: activeTab === item.id }"
     >
       {{ item.title }}
@@ -35,20 +35,21 @@
 </template>
 
 <style lang="scss" scoped>
-  .profile-buttons {
+  .tab-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin-top: 5px;
 
-    .profile-tab-button {
+    .tab-button {
       background-color: #ffffff;
       border: 0;
       border-radius: 12px 12px 0 0;
       font-weight: 500;
-      height: 40px;
-      width: 180px;
-  }
+      height: 34px;
+      padding: 8px 14px;
+    }
 
     .active {
       background-color: #eeeeee;
@@ -57,7 +58,6 @@
 
   .tab-content {
     background-color: #eeeeee;
-    padding: 10px;
-    box-sizing: border-box;
+    height: 100%;
   }
 </style>

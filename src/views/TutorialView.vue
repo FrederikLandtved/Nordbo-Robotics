@@ -4,9 +4,11 @@
   import { logOut } from '@/services/AuthService.js';
   import CourseBox from '../components/ui-kit/CourseBox.vue';
   import { getVideos } from '@/services/VideoService.js';
+  import TabBox from '../components/ui-kit/tab/TabBox.vue';
 
   const isActive = ref("all");
   const videos = ref([]);
+  const pageTabs = ref([{title: 'All', id:'all'}, {title: 'Introduction', id:'introduction'}, {title: 'Setup', id:'setup'}, {title: 'Calibration', id:'calibration'}, {title: 'Mimic', id:'mimic'}]);
 
   const setActive = (newActive) => {
     isActive.value = newActive;
@@ -26,81 +28,59 @@
 
 <template>
     <div class="top">
-        <div>
-        </div>
-            <h1>
-            Sanding Tutorials
-            </h1>
-            <p>
-            Watch the videos and learn how to 
-            sand with Mimic
-            </p>
+        <div></div>
+        <h1>Sanding Tutorials</h1>
+        <p> Watch the videos and learn how to sand with Mimic</p>
         <button class="WatchAll">
             Watch all <img src="/assets/img/icons/PlayAll.svg">
         </button>
     </div>
 
-    <div class="video-filter-buttons">
-        <button @click="setActive('all')" class="profile-tab-button" :class="{ active: isActive === 'all' }">
-          All
-        </button>
-        
-        <button @click="setActive('introduction')" class="profile-tab-button" :class="{active: isActive  === 'introduction' }">
-            Introduction
-        </button>
+    <TabBox :tabs="pageTabs">
+      <template #all>
+        <div class="mylibary-box">
+          <div class="mylibrary-box-item m-bottom" v-for="tutorial in videos" :key="tutorial.key">
+              <h2>{{ tutorial.name }}</h2>
+                <div class="course-box-list">
+                  <CourseBox 
+                    v-for="video in tutorial.videos" 
+                    :author='video.author' 
+                    :title='tutorial.name' 
+                    :description='video.description' 
+                    date='27-04-2023' 
+                    @click="goToRoute('/video/' + video.id)"
+                    :key='video.id'
+                  >
+                  </CourseBox>
+                </div>
+          </div>
+        </div>
+      </template>
 
-        <button @click="setActive('setup')" class="profile-tab-button" :class="{active: isActive  === 'setup' }">
-            Setup
-        </button>
+      <template #introduction>
+        <div class="mylibary-box">
+          <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+            <h2 v-if="tutorial.name === 'Introduction'">{{ tutorial.name }}</h2>
+              <div class="course-box-list vertical" v-if="tutorial.name === 'Introduction'" >
+                <CourseBox 
+                  v-for="video in tutorial.videos"
+                  :author='video.author' 
+                  :title='tutorial.name' 
+                  :description='video.description' 
+                  date='27-04-2023' 
+                  @click="goToRoute('/video/' + video.id)"
+                  :key='video.id'
+                >
+                </CourseBox>
+              </div>
+          </div>
+        </div>
+      </template>
 
-        <button @click="setActive('calibration')" class="profile-tab-button" :class="{active: isActive  === 'calibration' }">
-            Calibration
-        </button>
-
-        <button @click="setActive('mimic')" class="profile-tab-button" :class="{active: isActive  === 'mimic' }">
-            Mimic
-        </button>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive ==='all'">
-      <div class="mylibrary-box-item m-bottom" v-for="tutorial in videos" :key="tutorial.key">
-          <h2>{{ tutorial.name }}</h2>
-            <div class="course-box-list">
-              <CourseBox 
-                v-for="video in tutorial.videos" 
-                :author='video.author' 
-                :title='tutorial.name' 
-                :description='video.description' 
-                date='27-04-2023' 
-                @click="goToRoute('/video/' + video.id)"
-                :key='video.id'
-              >
-              </CourseBox>
-            </div>
-      </div>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive =='introduction'">
-      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
-        <h2 v-if="tutorial.name === 'Introduction'">{{ tutorial.name }}</h2>
-            <div class="course-box-list vertical" v-if="tutorial.name === 'Introduction'" >
-              <CourseBox 
-                v-for="video in tutorial.videos"
-                :author='video.author' 
-                :title='tutorial.name' 
-                :description='video.description' 
-                date='27-04-2023' 
-                @click="goToRoute('/video/' + video.id)"
-                :key='video.id'
-              >
-              </CourseBox>
-            </div>
-      </div>
-    </div>
-
-    <div class="mylibary-box" v-if="isActive =='setup'">
-      <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
-          <h2 v-if="tutorial.name === 'Setup'">{{ tutorial.name }}</h2>
+      <template #setup>
+        <div class="mylibary-box">
+          <div class="mylibrary-box-item" v-for="tutorial in videos" :key="tutorial.key">
+            <h2 v-if="tutorial.name === 'Setup'">{{ tutorial.name }}</h2>
             <div class="course-box-list vertical" v-if="tutorial.name === 'Setup'">
               <CourseBox 
                 v-for="video in tutorial.videos"
@@ -113,8 +93,10 @@
               >
               </CourseBox>
             </div>
-      </div>
-    </div>
+          </div>
+        </div>
+      </template>
+    </TabBox>
 </template>
 
 
@@ -124,20 +106,20 @@
 @import "@/assets/main.scss";
 
 
-.top{
+.top {
     background-image: url(/assets/img/sandning-tuto.png);
     width: 100%;
     height: 210px;
 
-    div{
-    margin-top: 55px; 
-    height: 100px;
-    width: 100%;
-    background-color:#02225c5f;
-    filter: blur(12px);
-    border-radius: 20px;
-    border: 0;
-    position: absolute;
+    div {
+      margin-top: 55px; 
+      height: 100px;
+      width: 100%;
+      background-color:#02225c5f;
+      filter: blur(12px);
+      border-radius: 20px;
+      border: 0;
+      position: absolute;
     }
  
     h1{
