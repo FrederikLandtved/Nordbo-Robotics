@@ -1,10 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-
-
 const expanded = ref(false);
-
 
 function toggleExpanded(){
     expanded.value = !expanded.value
@@ -14,9 +11,6 @@ function toggleExpanded(){
     title: String,
     desc: String
   })
-
-
-
 
 </script>
 
@@ -65,7 +59,7 @@ justify-content: space-between;
     
 
       h4 {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 25px;
         margin-top: 15px;
         font-weight: 500;
@@ -85,9 +79,10 @@ justify-content: space-between;
         padding-bottom: 20px;
  
             p{
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: lighter;
                 margin: 0px 10px;
+                padding-right: 30px;
             }
         
       }
