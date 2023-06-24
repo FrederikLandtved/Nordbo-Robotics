@@ -22,6 +22,10 @@
     } else {
       // User is signed out
       isAuthenticated.value = false;
+      const goToRoute = (route) => {
+      router.push({ path: route });
+    }
+      goToRoute('/auth');
     }
   });
 </script>
