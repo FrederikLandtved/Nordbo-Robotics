@@ -1,4 +1,6 @@
 <script setup>
+
+import NotifikationBox from '../components/ui-kit/NotifikationBox.vue';
 </script>
 
 <template>
@@ -11,35 +13,42 @@
         <div class="notifications">
             <h2>Notifications</h2>
             
-            <div class="noti noti-aktiv">
-                <h3>New course available</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>2 days ago</span>
-            </div>
+            <NotifikationBox  class="noti-aktiv"
+            title="New course available"
+            desc="A new course from Jeppe Hansen has just been published"
+            time="2 days ago"
+            :isActive='true'
+            ></NotifikationBox>
             
-            <div class="noti">
-                <h3>Create your new badge</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>5 days ago</span>
-            </div>
-            
-            <div class="noti">
-                <h3>Remember to finish the following courses</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>1 week ago</span>
-            </div>
+            <NotifikationBox
+            title="Congrats with your new badge"
+            desc="You have just reached a new milestone in your learning progress.."
+            time="3 days ago"
+            ></NotifikationBox>
 
-            <div class="noti">
-                <h3>You must renew your downloads</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>2 weeks ago</span>
-            </div>
+            <NotifikationBox
+            title="Remember to finish the following courses"
+            desc="Indtroduction - Sanding & Calibration - Sanding"
+            time="1 week ago" 
+            ></NotifikationBox>
 
-            <div class="noti">
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <span>1 month ago</span>
-            </div>
+            <NotifikationBox
+            title="New course available"
+            desc="A new course from Jeppe Hansen has just been published"
+            time="2 weeks ago"
+            ></NotifikationBox>
+
+            <NotifikationBox
+            title="You must renew your downloads"
+            desc="A new course from Thomas Petersen has just been published"
+            time="1 month ago"
+            ></NotifikationBox>
+
+            <NotifikationBox
+            title="New course available"
+            desc="A new course from Isabella Larsen has just been published"
+            time="1 month ago"
+            ></NotifikationBox>
 
 
         
@@ -51,40 +60,25 @@
 
 
 <style scoped lang="scss">
-@import "@/assets/main.scss";
+
 
 //Notifications
-
+.profile{
+   margin-top: 48px; 
+}
 .notifications {
-    font-weight: 300;
+    
     
     h2{
         margin: 30px 15px;
-        font-weight: 300px;
+        font-weight: 500;
+        font-size: 22px;
     }
+
 }
 
-.noti{
-   padding-bottom: 20px;
-   background-color: $background-noti;
-   padding: 15px;
-   
-  
-  p{
-    font-size: 12px;
-  }
-   span{
-    font-size: 10px;
-    color:#054BD0;
-    
-   }
-   h3{
-    margin-bottom: 10px;
-    font-size: 14px;
-   }
-}
-.noti-aktiv{
-    background-color: $background-noti-aktiv;
-}
+
+
+
 
 </style>
