@@ -17,8 +17,7 @@ function toggleExpanded(){
 
 <template>
 
-
-<div class="qa-menu">
+  <div class="qa-menu">
     <div class="header">
       <h4>{{ title }}</h4>
       <button @click="toggleExpanded">
@@ -33,7 +32,6 @@ function toggleExpanded(){
       </div> 
     </div>
   </div>
-
 
 </template>
 

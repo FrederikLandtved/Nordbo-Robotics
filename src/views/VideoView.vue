@@ -160,9 +160,6 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
   
-
-
-
   <QaBox
   title="How do I use Mimic for polishing?"
   desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
