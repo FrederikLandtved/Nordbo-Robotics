@@ -72,10 +72,8 @@
                     :title="completedCourse.title"
                     :description='completedCourse.description'
                     :author='completedCourse.author'
-                    :yolo='true'
                     date="25-05-2023"
-                  >
-                  </CourseBox>
+                  />
                 </div>
             </div>
         </div>

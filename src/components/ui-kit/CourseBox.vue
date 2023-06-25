@@ -65,14 +65,14 @@ defineProps({
     }
 
     &__author-calendar-box {
-    border-top: 1px solid #f4f4f4;
-    display: flex;
-    flex-direction: columns;
-    align-items: center;
-    justify-content: space-between;
-    height: 20px;
-    margin: 0 auto;
-    width: 90%;
+      border-top: 1px solid #f4f4f4;
+      display: flex;
+      flex-direction: columns;
+      align-items: center;
+      justify-content: space-between;
+      height: 20px;
+      margin: 0 auto;
+      width: 90%;
 
     div {
       display: flex;

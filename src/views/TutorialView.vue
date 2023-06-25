@@ -70,6 +70,7 @@
                   date='27-04-2023' 
                   @click="goToRoute('/video/' + video.id)"
                   :key='video.id'
+                  fullWidth
                 >
                 </CourseBox>
               </div>
@@ -90,6 +91,7 @@
                 date='27-04-2023' 
                 @click="goToRoute('/video/' + video.id)"
                 :key='video.id'
+                fullWidth
               >
               </CourseBox>
             </div>

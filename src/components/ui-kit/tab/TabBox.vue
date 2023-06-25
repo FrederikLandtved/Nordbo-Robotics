@@ -2,10 +2,11 @@
   import { ref, onMounted } from 'vue';
 
   const activeTab = ref('');
+  const fullWidthButtons = ref(false);
 
   const props = defineProps({
     tabs: Array
-  }) 
+  });
 
   const setActiveTab = (newActiveTab) => {
     activeTab.value = newActiveTab;
@@ -13,15 +14,19 @@
 
   onMounted(() => {
     activeTab.value = props.tabs[0].id;
-  })
+    
+    if(props.tabs.length <= 2){
+      fullWidthButtons.value = true;
+    }
+  });
 </script>
 
 <template>
   <div class="tab-buttons">
     <button 
       class="tab-buttons__item" 
-      :class="{ '--active': activeTab === tabButton.id }"
-      :key="tabButton.title" 
+      :class="{ '--active': activeTab === tabButton.id, '--full-width': fullWidthButtons}"
+      :key="tabButton.id" 
       v-for="tabButton in tabs" 
       @click="setActiveTab(tabButton.id)" 
     >
@@ -38,9 +43,10 @@
   .tab-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-top: 5px;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 6px;
 
     .tab-buttons__item {
       background-color: #ffffff;
@@ -52,6 +58,10 @@
 
       &.--active {
         background-color: #eeeeee;
+      }
+
+      &.--full-width {
+        width: 100%;
       }
     }
   }
