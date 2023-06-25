@@ -20,12 +20,12 @@
   <div class="tab-buttons">
     <button 
       class="tab-buttons__item" 
-      :class="{ '--active': activeTab === item.id }"
-      :key="item.title" 
-      v-for="item in tabs" 
-      @click="setActiveTab(item.id)" 
+      :class="{ '--active': activeTab === tabButton.id }"
+      :key="tabButton.title" 
+      v-for="tabButton in tabs" 
+      @click="setActiveTab(tabButton.id)" 
     >
-      {{ item.title }}
+      {{ tabButton.title }}
     </button>
   </div>
   
