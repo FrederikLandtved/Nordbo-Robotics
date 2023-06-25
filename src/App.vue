@@ -17,7 +17,7 @@
       const goToRoute = (route) => {
       router.push({ path: route });
     }
-    goToRoute('/home/');
+    goToRoute('home');
 
     } else {
       // User is signed out
@@ -25,7 +25,7 @@
       const goToRoute = (route) => {
       router.push({ path: route });
     }
-      goToRoute('/auth');
+      goToRoute('auth');
     }
   });
 </script>

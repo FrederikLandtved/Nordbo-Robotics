@@ -41,7 +41,7 @@ export const login = (email, password) => {
       // Signed in 
       const user = userCredential.user;
       if(user){
-        goToRoute("/");
+        goToRoute("home");
       }
       // ...
     })

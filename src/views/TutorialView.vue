@@ -4,6 +4,8 @@
   import { logOut } from '@/services/AuthService.js';
   import CourseBox from '../components/ui-kit/CourseBox.vue';
   import { getVideos } from '@/services/VideoService.js';
+  import WatchAll from '../components/ui-kit/WatchAll.vue';
+
 
   const isActive = ref("all");
   const videos = ref([]);
@@ -16,12 +18,22 @@
     router.push({ path: route });
   }
 
+  /*setup() {
+    const autoplayVideo = ref(click)
+
+    return {
+      autoplayVideo
+    }
+  }*/
+
   onMounted(() => {
     // Get tutorials from Firebase and add it to this components tutorials reference.
     videos.value = getVideos().then((tutorialArray) => { 
       videos.value = tutorialArray[0].tutorials;
     });
   })
+
+  //export class WatchAll {}
 </script>
 
 <template>
@@ -35,9 +47,12 @@
             Watch the videos and learn how to 
             sand with Mimic
             </p>
-        <button class="WatchAll" @click="goToRoute('/video/' + 1)">
+        <!--<button class="WatchAll" @click="goToRoute('/video/' + 1)" >
             Watch all <img src="/assets/img/icons/PlayAll.svg">
-        </button>
+        </button>-->
+        <WatchAll :click="goToRoute('/video/' + 1)"></WatchAll>
+
+
     </div>
 
     <div class="video-filter-buttons">

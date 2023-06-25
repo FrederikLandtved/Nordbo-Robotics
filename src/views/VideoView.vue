@@ -3,6 +3,8 @@
   import { ref, onMounted } from 'vue'
   import { useRoute } from 'vue-router';
   import { getVideo, registerVideoView } from '@/services/VideoService.js';
+  import watchClass from '../components/ui-kit/WatchAll.vue';
+  //import { autoplayVideo } from '@/views/TutorialView.vue';
 
   const isActive = ref("oversigt");
   const route = useRoute();
@@ -20,7 +22,11 @@
     });
   })
 
+
   function onEndedVideo() {
+
+    if(watchClass.click) {
+
     let currentVideo = route.params.id;
     currentVideo = eval(currentVideo) + 1;
 
@@ -32,12 +38,25 @@
     getVideo(currentVideo).then(video => {
       videoToShow.value = video;
     });
+  } else {
+    null;
   }
+  }
+
+/*  if (autoplayVideo.click) {
+    onEndedVideo(true);
+  } else {
+    onEndedVideo(false);
+  }*/
 
   const goToRoute = (route) => {
     router.push({ path: route });
   }
+
+  //export function onEndedVideo()
+
 </script>
+
 
 <template>
 
