@@ -106,20 +106,20 @@
 @import "@/assets/main.scss";
 
 
-.top {
+.top{
     background-image: url(/assets/img/sandning-tuto.png);
     width: 100%;
     height: 210px;
 
-    div {
-      margin-top: 55px; 
-      height: 100px;
-      width: 100%;
-      background-color:#02225c5f;
-      filter: blur(12px);
-      border-radius: 20px;
-      border: 0;
-      position: absolute;
+    div{
+    margin-top: 55px; 
+    height: 100px;
+    width: 100%;
+    background-color:#02225c5f;
+    filter: blur(12px);
+    border-radius: 20px;
+    border: 0;
+    position: absolute;
     }
  
     h1{

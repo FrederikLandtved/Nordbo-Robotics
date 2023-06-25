@@ -4,7 +4,7 @@
   const activeTab = ref('');
 
   const props = defineProps({
-      tabs: Array
+    tabs: Array
   }) 
 
   const setActiveTab = (newActiveTab) => {
@@ -15,14 +15,15 @@
     activeTab.value = props.tabs[0].id;
   })
 </script>
+
 <template>
   <div class="tab-buttons">
     <button 
-      v-for="item in tabs" 
+      class="tab-buttons__item" 
+      :class="{ '--active': activeTab === item.id }"
       :key="item.title" 
+      v-for="item in tabs" 
       @click="setActiveTab(item.id)" 
-      class="tab-button" 
-      :class="{ active: activeTab === item.id }"
     >
       {{ item.title }}
     </button>
@@ -31,7 +32,6 @@
   <div class="tab-content">
     <slot :name="activeTab" />
   </div>
-   
 </template>
 
 <style lang="scss" scoped>
@@ -42,17 +42,17 @@
     width: 100%;
     margin-top: 5px;
 
-    .tab-button {
+    .tab-buttons__item {
       background-color: #ffffff;
       border: 0;
       border-radius: 12px 12px 0 0;
       font-weight: 500;
       height: 34px;
       padding: 8px 14px;
-    }
 
-    .active {
-      background-color: #eeeeee;
+      &.--active {
+        background-color: #eeeeee;
+      }
     }
   }
 
