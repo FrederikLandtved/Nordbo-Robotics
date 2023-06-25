@@ -161,14 +161,18 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
   
   <QaBox
+  title="What is Mimics best feature?"
+  desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
+  ></QaBox>
+
+  <QaBox
   title="How do I use Mimic for polishing?"
   desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
   ></QaBox>
 
-
   <QaBox
-  title="What is Mimics best feature?"
-  desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
+  title="How do I use Mimic for sanding?"
+  desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
   ></QaBox>
 
   <QaBox
