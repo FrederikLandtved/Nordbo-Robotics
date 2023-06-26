@@ -7,21 +7,13 @@
   import { authentication } from '../../firebase'
   import { getUsersVideos } from '@/services/VideoService.js'
   import TabBox from '../components/ui-kit/tab/TabBox.vue';
+  import { useUserStore } from '@/stores/userStore.js';
 
   const auth = authentication;
   const displayName = ref('Loading..');
   const videos = ref([]);
   const pageTabs = ref([{title: 'My Library', id:'mylibrary'}, {title: 'Download', id:'download'}]);
-  
-  onAuthStateChanged(auth, (user) => {
-    if (user !== null) {
-      // User is signed in
-      displayName.value = user.displayName;
-      getUsersVideos().then((usersVideos) => {
-        videos.value = usersVideos;
-      });
-    }
-  });
+  const userStore = useUserStore();
 
   const logOutUser = () => {
     logOut();
@@ -30,7 +22,16 @@
   const goToRoute = (route) => {
     router.push({ path: route });
   }
-</script>
+
+  onMounted(() => {
+    const user = userStore.user;
+    displayName.value = user.displayName;
+
+    getUsersVideos().then((usersVideos) => {
+      videos.value = usersVideos;
+    });
+  })
+</script> 
 
 <template>
   <div class="mylearning">

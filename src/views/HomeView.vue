@@ -18,6 +18,7 @@
       displayName.value = user.displayName;
     }
   });
+  
   onMounted(() => {
     // Get tutorials from Firebase and add it to this components tutorials reference.
     tutorials.value = getTutorials().then((tutorialArray) => { 
