@@ -7,10 +7,12 @@ export const registerVideoView = async(id) => {
   const collectionRef = collection(database, 'user-video-views');
   const usersVideos = await getUsersVideoViews();
 
+  //For hver ID i usersVideos og hvis videoen allerede er på liste, bliver den ikke tilføjet igen
   if (usersVideos.some(video => video.videoId == id && video.email == email)) {
     return;
   }
   
+  //Tilføjer til liste
   await addDoc(collectionRef, {
     email: email,
     videoId: id
