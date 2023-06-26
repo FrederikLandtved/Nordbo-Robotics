@@ -161,37 +161,32 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
 <div class="qa-box aktiv" v-if="isActive === 'QA'">
   
   <QaBox
-  title="What is Mimics best feature?"
-  desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
-  ></QaBox>
-
-  <QaBox
   title="How do I use Mimic for polishing?"
   desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
   ></QaBox>
 
   <QaBox
-  title="How do I use Mimic for sanding?"
-  desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
+  title="What is Mimics best feature?"
+  desc="Mimics best feature would depend on your own opinion. At nordbo Robotics we think its the calibration, and love all our robots equally."
   ></QaBox>
 
   <QaBox
   title="How to prepare for your next project"
   desc=""
   ></QaBox>
-
+  
   <QaBox
   title="How to redo the calibration"
   desc=""
   ></QaBox>
 
   <QaBox
-  title="How do i attach sanding disc to Mimic?"
-  desc=""
+  title="How do I use Mimic for sanding?"
+  desc="Mimic can be used i various ways. The primary way of using Mimic for polishing would be to link the machine correctly."
   ></QaBox>
-
+  
   <QaBox
-  title="How do i use Mimic for sanding?"
+  title="How do i attach sanding disc to Mimic?"
   desc=""
   ></QaBox>
 
@@ -200,6 +195,16 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
   desc=""
   ></QaBox>
   
+
+
+
+
+  <QaBox
+  title="How do i use Mimic for sanding?"
+  desc=""
+  ></QaBox>
+
+
   
   
  
@@ -241,7 +246,7 @@ For at holde din robot i god stand skal du regelmæssigt rengøre dens sensorer,
     }
 
     img {
-      height: 10px;
+      height: 15px;
       margin-top: 18px;
       width: 10%;
     }

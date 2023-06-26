@@ -77,10 +77,11 @@ justify-content: space-between;
         padding-bottom: 20px;
  
             p{
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: lighter;
-                margin: 0px 10px;
+                margin: -10px 10px;
                 padding-right: 30px;
+                line-height: 1.5;
             }
         
       }
