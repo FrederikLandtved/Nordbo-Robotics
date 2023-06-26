@@ -57,7 +57,7 @@
       padding: 8px 14px;
 
       &.--active {
-        background-color: #eeeeee;
+        background-color: #d4d4d4;
       }
 
       &.--full-width {
@@ -67,7 +67,7 @@
   }
 
   .tab-content {
-    background-color: #eeeeee;
+    background-color: #d4d4d4;
     height: 100%;
   }
 </style>

@@ -248,7 +248,7 @@
   }
 
   .aktiv {
-    background-color: #eeeeee;
+    background-color: #d4d4d4;
   }
 
   .oversigt-box {

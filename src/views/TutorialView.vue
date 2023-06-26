@@ -193,7 +193,7 @@
   }
 
   .mylibary-box {
-    background-color: #f1f1f1;
+    background-color: #d4d4d4;
     height: calc(100vh - 350px);
     overflow-y: scroll;
     padding: 20px 10px;
