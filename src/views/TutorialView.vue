@@ -50,7 +50,7 @@
         <!--<button class="WatchAll" @click="goToRoute('/video/' + 1)" >
             Watch all <img src="/assets/img/icons/PlayAll.svg">
         </button>-->
-        <WatchAll :click="goToRoute('/video/' + 1)"></WatchAll>
+        <WatchAll @click="goToRoute('/video/' + 1)"></WatchAll>
 
 
     </div>

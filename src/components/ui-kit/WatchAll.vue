@@ -15,7 +15,7 @@ export { watchClass };
 </script>
 
 <template>
-<button class="WatchAll" {{ click }} >
+<button class="WatchAll" >
             Watch all <img src="/assets/img/icons/PlayAll.svg">
 </button>
 </template>
